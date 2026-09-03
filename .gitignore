@@ -1,0 +1,24 @@
+.DS_Store
+.venv/
+*.egg-info/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# Dataset files are distributed separately and must not be committed.
+data/raw/
+data/interim/
+data/processed/
+data/archives/
+
+# Generated experiment artifacts.
+outputs/
+checkpoints/
+wandb/
+mlruns/
+reports/figures/generated/
+reports/tables/generated/

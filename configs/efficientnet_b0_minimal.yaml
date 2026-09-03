@@ -1,0 +1,25 @@
+schema_version: 1
+experiment:
+  name: efficientnet_b0_minimal
+  seed: 42
+  output_root: outputs
+data:
+  root: data/raw/NEU-CLS
+  manifest: data/manifests/neu_cls_v2.csv
+  image_size: 224
+  augmentation: minimal
+model:
+  name: efficientnet_b0
+  pretrained: true
+training:
+  epochs: 50
+  batch_size: 32
+  num_workers: 4
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  label_smoothing: 0.05
+  early_stopping_patience: 10
+  warmup_epochs: 3
+  min_learning_rate: 0.000001
+  amp: true
+  device: auto

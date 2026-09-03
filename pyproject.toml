@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "industrial-surface-defects"
+version = "0.1.0"
+description = "Leakage-aware NEU-CLS surface defect classification experiments"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "matplotlib>=3.9,<4",
+  "numpy>=1.26,<3",
+  "pandas>=2.2,<3",
+  "pillow>=10.3,<13",
+  "pyyaml>=6.0,<7",
+  "scikit-learn>=1.5,<2",
+  "seaborn>=0.13,<1",
+  "torch>=2.3,<3",
+  "torchvision>=0.18,<1",
+  "tqdm>=4.66,<5",
+]
+
+[project.optional-dependencies]
+data = ["gdown>=5.2,<6"]
+dev = [
+  "pytest>=8.2,<10",
+  "pytest-cov>=5,<8",
+  "ruff>=0.6,<1",
+]
+notebook = [
+  "ipykernel>=6.29,<8",
+  "jupyterlab>=4.2,<5",
+]
+
+[project.scripts]
+neu-prepare = "industrial_surface_defects.prepare:main"
+neu-train = "industrial_surface_defects.train:main"
+neu-evaluate = "industrial_surface_defects.evaluate:main"
+neu-analyze-errors = "industrial_surface_defects.error_analysis:main"
+neu-robustness = "industrial_surface_defects.robustness:main"
+neu-compare = "industrial_surface_defects.compare:main"
+neu-explain = "industrial_surface_defects.explain:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-markers"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]

@@ -1,0 +1,9 @@
+path,group_id,review_status,review_evidence
+NEU-CLS/PS_171.bmp,shifted_duplicate:PS_171__PS_292,confirmed_shifted_duplicate,"Pixel-identical 198x198 overlap after translation dy=-2, dx=-2."
+NEU-CLS/PS_292.bmp,shifted_duplicate:PS_171__PS_292,confirmed_shifted_duplicate,"Pixel-identical 198x198 overlap after translation dy=-2, dx=-2."
+NEU-CLS/Pa_199.bmp,shifted_duplicate:Pa_199__Pa_201,confirmed_shifted_duplicate,"Pixel-identical 194x189 overlap after translation dy=-6, dx=-11."
+NEU-CLS/Pa_201.bmp,shifted_duplicate:Pa_199__Pa_201,confirmed_shifted_duplicate,"Pixel-identical 194x189 overlap after translation dy=-6, dx=-11."
+NEU-CLS/Pa_2.bmp,shifted_duplicate:Pa_2__Pa_5,confirmed_shifted_duplicate,"Pixel-identical 191x198 overlap after translation dy=-9, dx=2."
+NEU-CLS/Pa_5.bmp,shifted_duplicate:Pa_2__Pa_5,confirmed_shifted_duplicate,"Pixel-identical 191x198 overlap after translation dy=-9, dx=2."
+NEU-CLS/In_60.bmp,shifted_duplicate:In_60__In_62,confirmed_shifted_duplicate,"Pixel-identical 193x190 overlap after translation dy=-7, dx=-10."
+NEU-CLS/In_62.bmp,shifted_duplicate:In_60__In_62,confirmed_shifted_duplicate,"Pixel-identical 193x190 overlap after translation dy=-7, dx=-10."

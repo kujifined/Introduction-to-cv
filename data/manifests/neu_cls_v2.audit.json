@@ -1,0 +1,79 @@
+{
+  "class_counts": {
+    "crazing": 300,
+    "inclusion": 300,
+    "patches": 300,
+    "pitted_surface": 300,
+    "rolled_in_scale": 300,
+    "scratches": 300
+  },
+  "dataset_fingerprint_sha256": "b18b4020f49500059724667f15827d797d4b77d99c0ec0c81903c1210b367a7f",
+  "effective_class_counts": {
+    "crazing": 300,
+    "inclusion": 300,
+    "patches": 299,
+    "pitted_surface": 300,
+    "rolled_in_scale": 300,
+    "scratches": 300
+  },
+  "effective_image_count": 1799,
+  "exact_duplicate_extra_images": 1,
+  "image_count": 1800,
+  "manual_group_map": "data/manifests/neu_cls_reviewed_groups_v2.csv",
+  "mode_counts": {
+    "L": 1800
+  },
+  "near_duplicate_candidates": 13,
+  "near_duplicate_confirmed_shifted_pairs": 4,
+  "near_duplicate_cross_split_candidates": 1,
+  "near_duplicate_cross_split_unresolved": 0,
+  "near_duplicate_hash": "64-bit DCT pHash",
+  "near_duplicate_not_duplicate_after_review": 9,
+  "near_duplicate_threshold": 12,
+  "near_duplicate_unresolved_candidates": 0,
+  "near_duplicate_warning": "pHash pairs are review candidates, not automatically confirmed duplicates. Visually inspect cross-split candidates before training.",
+  "quarantined_exact_duplicates": [
+    {
+      "class_name": "patches",
+      "path": "NEU-CLS/Pa_105.bmp",
+      "reason": "byte-identical duplicate; lexicographically first path retained",
+      "sha256": "6833002b8b7428946677f2cb4a4cb523e288619d73e923aea1fcf14903d65af2"
+    }
+  ],
+  "size_counts": {
+    "200x200": 1800
+  },
+  "split_counts": {
+    "test": {
+      "crazing": 60,
+      "inclusion": 60,
+      "patches": 60,
+      "pitted_surface": 60,
+      "rolled_in_scale": 60,
+      "scratches": 60
+    },
+    "train": {
+      "crazing": 210,
+      "inclusion": 210,
+      "patches": 209,
+      "pitted_surface": 210,
+      "rolled_in_scale": 210,
+      "scratches": 210
+    },
+    "val": {
+      "crazing": 30,
+      "inclusion": 30,
+      "patches": 30,
+      "pitted_surface": 30,
+      "rolled_in_scale": 30,
+      "scratches": 30
+    }
+  },
+  "split_ratios": {
+    "test": 0.2,
+    "train": 0.7,
+    "val": 0.1
+  },
+  "split_seed": 42,
+  "strict_neu_cls": true
+}

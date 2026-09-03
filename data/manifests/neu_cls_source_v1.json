@@ -1,0 +1,12 @@
+{
+  "archive_filename": "NEU-CLS.rar",
+  "archive_sha256": "a85bcc6bfa1a40e76f28079e135694aaf5f6a4ee01203f7eaacff0ebafaa96f8",
+  "archive_size_bytes": 50733617,
+  "download_url_used": "https://drive.google.com/file/d/1NGlXT9sIaQpyxUoT6MLKm1Pr6x8oxOvc/view",
+  "downloaded_at_utc": "2026-09-03T22:23:50.362021+00:00",
+  "extraction_tool": "tar (bsdtar 3.5.3)",
+  "gdown_version": "5.2.2",
+  "landing_page_url": "https://faculty.neu.edu.cn/songkechen/zh_CN/zdylm/263270/list/index.htm",
+  "licence_note": "The official page does not state a standard machine-readable licence; the images are not redistributed in this repository.",
+  "redistributed_in_repository": false
+}
