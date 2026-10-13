@@ -7,7 +7,7 @@ name = "industrial-surface-defects"
 version = "0.1.0"
 description = "Leakage-aware NEU-CLS surface defect classification experiments"
 readme = "README.md"
-requires-python = ">=3.11,<3.13"
+requires-python = ">=3.11,<3.14"
 dependencies = [
   "matplotlib>=3.9,<4",
   "numpy>=1.26,<3",

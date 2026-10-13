@@ -34,7 +34,8 @@ reserved test set has not been evaluated, and no robustness or multi-seed
 results are claimed.
 
 - [Public Kaggle notebook and run output](https://www.kaggle.com/code/datastr3am/icv-p03-resnet18-baseline-seed-43)
-- [Milestone report](reports/initial_baseline_20261013.md)
+- [Concise milestone report for submission](reports/baseline_milestone_summary_20261013.md)
+- [Detailed implementation notes](reports/initial_baseline_20261013.md)
 - [Verified configuration, logs, predictions and figures](reports/kaggle_baseline_20261013/)
 - [Working Kaggle notebook source](notebooks/05_kaggle_baseline_v3.ipynb)
 
@@ -157,8 +158,12 @@ The complete registered procedure is in
 
 ## Reproducible runbook
 
-Run all commands from the repository root. Python 3.11 or 3.12 and
+Run all commands from the repository root. Python 3.11, 3.12 or 3.13 and
 [uv](https://docs.astral.sh/uv/) are required.
+
+Python 3.11 is the repository default, not an exclusive requirement. To use
+Python 3.13, add `--python 3.13` to the `uv sync` and `uv run` commands below.
+GitHub CI checks package installation, linting and tests on Python 3.13.
 
 For a remote GPU run, use
 [`notebooks/02_cloud_runner.ipynb`](notebooks/02_cloud_runner.ipynb). Its
@@ -172,9 +177,10 @@ For the single baseline on Kaggle, use the verified
 It retains Kaggle's CUDA packages, imports pinned project source directly,
 extracts the official archive with `unar`, and requires data verification and
 all tests to pass before training. It evaluates validation only. The recorded
-Kaggle run used Python 3.13 outside the package's declared Python range; its
-environment metadata documents this source-import execution mode rather than
-claiming an installation from `uv.lock`.
+Kaggle run used Python 3.13 and the pinned source-import execution mode, not
+an installation from `uv.lock`. Its saved environment metadata describes the
+original training revision; adding Python 3.13 support does not alter that
+run's configuration, checkpoint or results.
 
 ### 1. Create the locked environment
 
@@ -297,6 +303,7 @@ report only from these generated artifacts; keep every unmeasured field as
 │   ├── 02_cloud_runner.ipynb # opt-in Colab/Kaggle orchestration
 │   └── 05_kaggle_baseline_v3.ipynb # verified single-baseline Kaggle runner
 ├── reports/
+│   ├── baseline_milestone_summary_20261013.md # concise submission report
 │   ├── initial_baseline_20261013.md
 │   └── kaggle_baseline_20261013/ # checked baseline evidence, no weights
 ├── scripts/                 # download and 12-run orchestration

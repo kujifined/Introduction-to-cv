@@ -1,6 +1,8 @@
 # Industrial Surface Defect Classification
 
-Introduction to Computer Vision | Team P03 | 13 October 2026
+Introduction to Computer Vision | Team P03 | Detailed implementation notes | 13 October 2026
+
+Submission summary: [concise baseline milestone report](https://github.com/kujifined/Introduction-to-cv/blob/main/reports/baseline_milestone_summary_20261013.md).
 
 ## 1. Current implementation
 
@@ -118,4 +120,4 @@ Architecture-specific responsibilities refer to running and analysing experiment
 
 ## 7. Next steps
 
-We will complete the registered ResNet-18 and EfficientNet-B0 experiments with both augmentation settings and seeds 42, 43 and 44 on a cloud GPU, retaining this seed-43 baseline as one completed configuration. After validation-based decisions are frozen, we will evaluate the selected checkpoints on the reserved test set. We will report both absolute macro-F1 on corrupted images and its drop from clean-image performance, then analyse observed false positives and visually similar defect types. The final analysis will discuss at least three observed failure cases, if available, without inventing mistakes when an evaluation has none.
+We will complete the registered ResNet-18 and EfficientNet-B0 experiments with both augmentation settings and seeds 42, 43 and 44 on a cloud GPU, retaining this seed-43 baseline as one completed configuration. After validation-based decisions are frozen, we will evaluate the selected checkpoints on the reserved test set. We will report both absolute macro-F1 on corrupted images and its drop from clean-image performance, then analyse observed false positives and visually similar defect types. The final failure analysis will inspect at least three observed failure cases and explain their likely causes.
