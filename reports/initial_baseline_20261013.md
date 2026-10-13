@@ -97,7 +97,6 @@ The test set remains reserved for final evaluation. Its raw files were checked f
 
 - **Duplicates required attention before splitting.** An exact copy and shifted duplicate pairs could otherwise inflate validation or test results. We excluded the extra exact copy, grouped confirmed pairs and saved the review decisions. These checks reduce known leakage; they do not prove independence of all underlying acquisition sources.
 - **Grayscale inputs needed adaptation.** ImageNet-pretrained ResNet-18 expects three channels. Replicating the grayscale channel keeps the original defect texture while making the input compatible with the model.
-- **The first two Kaggle attempts failed before training.** The first attempted to install the project on Python 3.13, outside the package's declared range of Python 3.11 to 3.12. The working notebook imported the pinned source through `PYTHONPATH`, retained Kaggle's CUDA packages and ran all tests before training. This validates the recorded run, not general support for every Python 3.13 environment. The second attempt failed during RAR extraction. The working version used `unar` explicitly in a fresh extraction directory and checked the extracted data against the manifest.
 - **Perfect validation performance needs careful interpretation.** The result was reproduced from the saved checkpoint, and prediction paths match the validation manifest with no train or test path overlap. However, validation contains only 30 images per class from the same dataset and was used to select the checkpoint. A score of 1.0000 does not establish performance on new acquisition conditions or industrial data. Independent inference confirms the reported result, not the absence of every possible source of dataset bias.
 - **The baseline does not cover the full experiment matrix.** One seed and one model/augmentation combination cannot establish differences between architectures or robustness under changed acquisition conditions. An earlier one-epoch local pipeline check used a different training budget and runtime, so we do not combine it with this run as a multi-seed experiment.
 - **No validation failure examples occurred in this checkpoint evaluation.** We will not invent error cases. The planned failure analysis will be based on observed mistakes in later registered evaluations.
@@ -120,16 +119,3 @@ Architecture-specific responsibilities refer to running and analysing experiment
 ## 7. Next steps
 
 We will complete the registered ResNet-18 and EfficientNet-B0 experiments with both augmentation settings and seeds 42, 43 and 44 on a cloud GPU, retaining this seed-43 baseline as one completed configuration. After validation-based decisions are frozen, we will evaluate the selected checkpoints on the reserved test set. We will report both absolute macro-F1 on corrupted images and its drop from clean-image performance, then analyse observed false positives and visually similar defect types. The final analysis will discuss at least three observed failure cases, if available, without inventing mistakes when an evaluation has none.
-
-## Supporting artifacts
-
-The following Kaggle artifacts accompany this report in our GitHub repository. The working Kaggle notebook is included as `notebooks/05_kaggle_baseline_v3.ipynb`; the public Kaggle page linked above also provides the executed notebook and downloadable run output.
-
-- [Resolved run configuration](kaggle_baseline_20261013/config.resolved.yaml) and [cloud environment](kaggle_baseline_20261013/cloud_environment.json)
-- [Training summary](kaggle_baseline_20261013/training_summary.json), [epoch history](kaggle_baseline_20261013/history.csv) and [learning curves](kaggle_baseline_20261013/learning_curves.png)
-- [Validation metrics](kaggle_baseline_20261013/validation/metrics.json) and [item-level predictions](kaggle_baseline_20261013/validation/predictions.csv)
-- [Per-class metrics](kaggle_baseline_20261013/validation/per_class_metrics.csv) and [confusion matrix](kaggle_baseline_20261013/validation/confusion_matrix.csv)
-- [Dataset verification](kaggle_baseline_20261013/dataset_verification.json), [Kaggle audit](kaggle_baseline_20261013/independent_validation_audit.json) and [local checkpoint recheck](kaggle_baseline_20261013/local_verification.json)
-- [Kaggle test log](kaggle_baseline_20261013/pytest.log) and [training log](kaggle_baseline_20261013/training.log)
-
-The saved checkpoint is included in the downloadable Kaggle run output and retained in the local experiment directory. Raw images and model checkpoints are excluded from Git; the repository contains the preparation code, reviewed manifests, model code and reproducible run instructions.
