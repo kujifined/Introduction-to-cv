@@ -8,9 +8,38 @@ NEU-CLS.
 > **Evidence status.** Data acquisition, audit, splitting, training,
 > evaluation, robustness, comparison, error-analysis, and explanation code is
 > implemented. The reviewed `neu_cls_v2` manifest is the fixed dataset
-> authority. No model run or numerical model result is claimed here until the
-> registered commands have produced and the team has checked the corresponding
-> artifacts.
+> authority. One ResNet-18 baseline run has completed on Kaggle, and its saved
+> validation predictions and checkpoint have been independently checked.
+> The full architecture/augmentation comparison and test evaluation remain
+> pending.
+
+## Initial baseline: 13 October 2026
+
+The ImageNet-pretrained ResNet-18 baseline used basic preprocessing without
+random augmentation, training seed `43`, and the fixed split with seed `42`.
+It ran on one Tesla T4 for 13 epochs before early stopping, with the epoch-3
+checkpoint selected by validation macro-F1.
+
+| Validation measure | Result |
+|---|---:|
+| Images | 180, with 30 per class |
+| Accuracy | 100.00% (180/180) |
+| Macro-F1 | 1.0000 |
+| Cross-entropy | 0.0458 |
+
+The perfect validation score was reproduced from the saved checkpoint using
+independent inference code. It is a checkpoint-selection result on a small,
+same-dataset validation set, not evidence of industrial generalisation. The
+reserved test set has not been evaluated, and no robustness or multi-seed
+results are claimed.
+
+- [Public Kaggle notebook and run output](https://www.kaggle.com/code/datastr3am/icv-p03-resnet18-baseline-seed-43)
+- [Milestone report](reports/initial_baseline_20261013.md)
+- [Verified configuration, logs, predictions and figures](reports/kaggle_baseline_20261013/)
+- [Working Kaggle notebook source](notebooks/05_kaggle_baseline_v3.ipynb)
+
+Raw images and model weights are not committed. The checkpoint is available
+in the downloadable Kaggle output, with its SHA-256 recorded in the audit.
 
 ## Team
 
@@ -138,6 +167,15 @@ to mounted storage, and it requires a human protocol-freeze record before the
 locked test stage. The shell commands below describe the same workflow for any
 managed GPU environment.
 
+For the single baseline on Kaggle, use the verified
+[`notebooks/05_kaggle_baseline_v3.ipynb`](notebooks/05_kaggle_baseline_v3.ipynb).
+It retains Kaggle's CUDA packages, imports pinned project source directly,
+extracts the official archive with `unar`, and requires data verification and
+all tests to pass before training. It evaluates validation only. The recorded
+Kaggle run used Python 3.13 outside the package's declared Python range; its
+environment metadata documents this source-import execution mode rather than
+claiming an installation from `uv.lock`.
+
 ### 1. Create the locked environment
 
 ```bash
@@ -256,7 +294,11 @@ report only from these generated artifacts; keep every unmeasured field as
 ├── docs/                    # protocol and report template
 ├── notebooks/
 │   ├── 01_eda.ipynb        # training-only EDA and visual QA
-│   └── 02_cloud_runner.ipynb # opt-in Colab/Kaggle orchestration
+│   ├── 02_cloud_runner.ipynb # opt-in Colab/Kaggle orchestration
+│   └── 05_kaggle_baseline_v3.ipynb # verified single-baseline Kaggle runner
+├── reports/
+│   ├── initial_baseline_20261013.md
+│   └── kaggle_baseline_20261013/ # checked baseline evidence, no weights
 ├── scripts/                 # download and 12-run orchestration
 ├── src/industrial_surface_defects/
 ├── tests/

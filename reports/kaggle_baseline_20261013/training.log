@@ -1,0 +1,25 @@
+Downloading: "https://download.pytorch.org/models/resnet18-f37072fd.pth" to /root/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth
+epoch=001 train_loss=1.2979 val_loss=0.8533 val_macro_f1=0.7616
+epoch=002 train_loss=0.3866 val_loss=0.0724 val_macro_f1=0.9944
+epoch=003 train_loss=0.2817 val_loss=0.0458 val_macro_f1=1.0000
+epoch=004 train_loss=0.2692 val_loss=0.0531 val_macro_f1=1.0000
+epoch=005 train_loss=0.2631 val_loss=0.0446 val_macro_f1=1.0000
+epoch=006 train_loss=0.2590 val_loss=0.0463 val_macro_f1=1.0000
+epoch=007 train_loss=0.2564 val_loss=0.0452 val_macro_f1=1.0000
+epoch=008 train_loss=0.2531 val_loss=0.0479 val_macro_f1=1.0000
+epoch=009 train_loss=0.2546 val_loss=0.0429 val_macro_f1=1.0000
+epoch=010 train_loss=0.2506 val_loss=0.0451 val_macro_f1=1.0000
+epoch=011 train_loss=0.2495 val_loss=0.0455 val_macro_f1=1.0000
+epoch=012 train_loss=0.2485 val_loss=0.0476 val_macro_f1=1.0000
+epoch=013 train_loss=0.2485 val_loss=0.0473 val_macro_f1=1.0000
+Early stopping after epoch 13; best epoch was 3.
+{
+  "status": "complete",
+  "best_epoch": 3,
+  "best_validation_macro_f1": 1.0,
+  "epochs_completed": 13,
+  "elapsed_seconds": 46.76021186899999,
+  "model_parameters": 11179590,
+  "checkpoint": "/kaggle/working/icv_baseline_v3/outputs/resnet18_minimal/seed_43_kaggle_baseline_v3_20261013/best.pt",
+  "test_split_accessed": false
+}

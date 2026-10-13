@@ -1,0 +1,11 @@
+{
+  "manifest_sha256": "df784b6590f90947db6fd40c8d2e9650ab168744a0bd400e13dc535927f8232d",
+  "archive_sha256": "a85bcc6bfa1a40e76f28079e135694aaf5f6a4ee01203f7eaacff0ebafaa96f8",
+  "split_counts": {
+    "excluded": 1,
+    "test": 360,
+    "train": 1259,
+    "val": 180
+  },
+  "every_manifest_file_hash_verified": true
+}

@@ -1,0 +1,7 @@
+class_index,class_name,precision,recall,f1,support,tp,fp,fn,tn,false_positive_rate
+0,crazing,1.0,1.0,1.0,30,30,0,0,150,0.0
+1,inclusion,1.0,1.0,1.0,30,30,0,0,150,0.0
+2,patches,1.0,1.0,1.0,30,30,0,0,150,0.0
+3,pitted_surface,1.0,1.0,1.0,30,30,0,0,150,0.0
+4,rolled_in_scale,1.0,1.0,1.0,30,30,0,0,150,0.0
+5,scratches,1.0,1.0,1.0,30,30,0,0,150,0.0

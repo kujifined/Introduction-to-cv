@@ -1,0 +1,13 @@
+{
+  "decoder": "/usr/bin/unar",
+  "command": [
+    "/usr/bin/unar",
+    "-q",
+    "-D",
+    "-o",
+    "/kaggle/temp/icv_neu_cls_v3/raw",
+    "/kaggle/temp/icv_neu_cls_v3/NEU-CLS.rar"
+  ],
+  "archive_sha256": "a85bcc6bfa1a40e76f28079e135694aaf5f6a4ee01203f7eaacff0ebafaa96f8",
+  "raw_data_in_results_zip": false
+}

@@ -1,0 +1,13 @@
+{
+  "cuda": "12.8",
+  "device": "cuda",
+  "device_name": "Tesla T4",
+  "git_commit": "f25c6142dfa6088d5da70d5a590f65fef08d76b8",
+  "machine": "x86_64",
+  "numpy": "2.1.3",
+  "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+  "python": "3.13.15",
+  "scikit_learn": "1.6.1",
+  "torch": "2.11.0+cu128",
+  "torchvision": "0.26.0+cu128"
+}

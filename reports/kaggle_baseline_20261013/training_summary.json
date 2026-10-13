@@ -1,0 +1,10 @@
+{
+  "best_epoch": 3,
+  "best_validation_macro_f1": 1.0,
+  "checkpoint": "/kaggle/working/icv_baseline_v3/outputs/resnet18_minimal/seed_43_kaggle_baseline_v3_20261013/best.pt",
+  "elapsed_seconds": 46.76021186899999,
+  "epochs_completed": 13,
+  "model_parameters": 11179590,
+  "status": "complete",
+  "test_split_accessed": false
+}
