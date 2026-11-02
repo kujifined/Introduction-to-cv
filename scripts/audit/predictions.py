@@ -10,7 +10,6 @@ import pandas as pd
 
 from .common import Audit, json_load, manual_metrics
 
-
 CleanPredictions = dict[
     tuple[str, int],
     tuple[np.ndarray, np.ndarray, list[str]],

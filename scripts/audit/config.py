@@ -7,7 +7,6 @@ from typing import Any
 
 import yaml
 
-
 REQUIRED_TOP_LEVEL = {
     "version",
     "profile",

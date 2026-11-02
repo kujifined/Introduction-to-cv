@@ -8,7 +8,6 @@ from collections import Counter
 from pathlib import Path
 
 import pandas as pd
-
 from audit.aggregation import audit_aggregations
 from audit.bootstrap import audit_bootstrap
 from audit.bundle import audit_bundle
