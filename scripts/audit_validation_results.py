@@ -10,9 +10,15 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-from audit.common import manual_confusion
-from audit.common import sha256_file as shared_sha256_file
-from audit.config import load_config
+
+if __package__:
+    from .audit.common import manual_confusion
+    from .audit.common import sha256_file as shared_sha256_file
+    from .audit.config import load_config
+else:
+    from audit.common import manual_confusion
+    from audit.common import sha256_file as shared_sha256_file
+    from audit.config import load_config
 
 CONFIGURATIONS = (
     "resnet18_minimal",

@@ -8,15 +8,27 @@ from collections import Counter
 from pathlib import Path
 
 import pandas as pd
-from audit.aggregation import audit_aggregations
-from audit.bootstrap import audit_bootstrap
-from audit.bundle import audit_bundle
-from audit.common import Audit
-from audit.config import load_config, load_contrasts
-from audit.failure_cases import audit_failure_materials
-from audit.manifest import audit_manifest
-from audit.predictions import audit_predictions_and_metrics
-from audit.source_data import audit_source_data
+
+if __package__:
+    from .audit.aggregation import audit_aggregations
+    from .audit.bootstrap import audit_bootstrap
+    from .audit.bundle import audit_bundle
+    from .audit.common import Audit
+    from .audit.config import load_config, load_contrasts
+    from .audit.failure_cases import audit_failure_materials
+    from .audit.manifest import audit_manifest
+    from .audit.predictions import audit_predictions_and_metrics
+    from .audit.source_data import audit_source_data
+else:
+    from audit.aggregation import audit_aggregations
+    from audit.bootstrap import audit_bootstrap
+    from audit.bundle import audit_bundle
+    from audit.common import Audit
+    from audit.config import load_config, load_contrasts
+    from audit.failure_cases import audit_failure_materials
+    from audit.manifest import audit_manifest
+    from audit.predictions import audit_predictions_and_metrics
+    from audit.source_data import audit_source_data
 
 
 def parse_args() -> argparse.Namespace:
