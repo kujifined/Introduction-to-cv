@@ -4,13 +4,15 @@
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 from collections import Counter
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
+
+from audit.common import manual_confusion, sha256_file as shared_sha256_file
+from audit.config import load_config
 
 CONFIGURATIONS = (
     "resnet18_minimal",
@@ -28,11 +30,7 @@ TOLERANCE = 1e-12
 
 
 def sha256_file(path: str | Path) -> str:
-    digest = hashlib.sha256()
-    with Path(path).open("rb") as handle:
-        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
-            digest.update(chunk)
-    return digest.hexdigest()
+    return shared_sha256_file(Path(path))
 
 
 def parse_correct(values: pd.Series) -> np.ndarray:
@@ -50,8 +48,7 @@ def calculate_metrics(
 ) -> tuple[float, float, np.ndarray, np.ndarray]:
     targets = table["true_index"].to_numpy(dtype=int)
     predictions = table["predicted_index"].to_numpy(dtype=int)
-    confusion = np.zeros((class_count, class_count), dtype=int)
-    np.add.at(confusion, (targets, predictions), 1)
+    confusion = manual_confusion(targets, predictions, class_count)
     true_positive = np.diag(confusion)
     denominator = confusion.sum(axis=0) + confusion.sum(axis=1)
     class_f1 = np.divide(
@@ -409,19 +406,50 @@ def audit_validation_results(
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
+        "--config",
+        type=Path,
+        help="Optional YAML profile; explicit CLI paths override YAML values",
+    )
+    parser.add_argument(
         "--root",
-        required=True,
+        type=Path,
         help="Pilot artifact root containing evaluation/ and aggregate CSV files",
     )
-    parser.add_argument("--manifest", required=True)
-    parser.add_argument("--reference-manifest")
-    parser.add_argument("--data-root")
-    parser.add_argument("--output-dir", required=True)
+    parser.add_argument("--manifest", type=Path)
+    parser.add_argument("--reference-manifest", type=Path)
+    parser.add_argument("--data-root", type=Path)
+    parser.add_argument("--output-dir", type=Path)
     return parser
 
 
 def main(argv: list[str] | None = None) -> None:
+    global TOLERANCE
     args = build_parser().parse_args(argv)
+    if args.config is not None:
+        project_root = Path(__file__).resolve().parents[1]
+        profile = load_config(args.config.resolve(), project_root)
+        TOLERANCE = float(profile["metrics"]["tolerance"])
+        paths = profile["paths"]
+        args.root = args.root or paths["results_root"]
+        args.manifest = args.manifest or paths.get("manifest")
+        args.reference_manifest = (
+            args.reference_manifest or paths.get("reference_manifest")
+        )
+        args.data_root = args.data_root or paths.get("data_root")
+        args.output_dir = args.output_dir or paths["output_dir"]
+    missing = [
+        name
+        for name, value in (
+            ("--root", args.root),
+            ("--manifest", args.manifest),
+            ("--output-dir", args.output_dir),
+        )
+        if value is None
+    ]
+    if missing:
+        raise ValueError(
+            "Required validation audit inputs are missing: " + ", ".join(missing)
+        )
     result = audit_validation_results(
         root=args.root,
         manifest_path=args.manifest,

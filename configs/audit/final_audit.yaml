@@ -1,0 +1,74 @@
+version: 1
+profile: final_test_bundle
+
+paths:
+  results_root: icv_final_results
+  failure_root: clean_failure_materials
+  source_archive: data/archives/NEU-CLS.rar
+  data_root: data/raw/NEU-CLS
+  output_dir: reports/final_verification
+  contrasts: configs/audit/registered_contrasts.yaml
+
+expectations:
+  bundle_files: 2681
+  source_archive_bytes: 50733617
+  source_archive_sha256: a85bcc6bfa1a40e76f28079e135694aaf5f6a4ee01203f7eaacff0ebafaa96f8
+  raw_file_count: 1800
+  manifest_rows: 1800
+  active_rows: 1799
+  splits:
+    train: 1259
+    val: 180
+    test: 360
+    excluded: 1
+  class_count: 6
+  target_split: test
+  target_support_per_class: 60
+  supplement_images: 6
+  checkpoints: 12
+  conditions_per_checkpoint: 28
+  samples_per_condition: 360
+  prediction_files: 336
+  prediction_rows: 120960
+
+experiment:
+  configurations:
+    - resnet18_minimal
+    - resnet18_camera
+    - efficientnet_b0_minimal
+    - efficientnet_b0_camera
+  seeds:
+    - 42
+    - 43
+    - 44
+
+metrics:
+  tolerance: 1.0e-12
+  probability_sum_tolerance: 1.0e-5
+  names:
+    - accuracy
+    - balanced_accuracy
+    - macro_f1
+    - weighted_f1
+    - top2_accuracy
+    - negative_log_likelihood
+    - brier_score
+    - expected_calibration_error_10_bins
+  summary_names:
+    - accuracy
+    - macro_f1
+    - balanced_accuracy
+    - negative_log_likelihood
+    - expected_calibration_error_10_bins
+    - brier_score
+
+bootstrap:
+  repetitions: 5000
+  base_seed: 42
+
+failure_cases:
+  paths:
+    - NEU-CLS/Sc_69.bmp
+    - NEU-CLS/In_283.bmp
+    - NEU-CLS/Pa_214.bmp
+
