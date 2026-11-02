@@ -1,0 +1,61 @@
+# Historical validation-pilot profile. Supply an extracted weekly bundle path
+# before using it with scripts/audit_validation_results.py. The final-test
+# orchestrator deliberately does not consume this different directory layout.
+version: 1
+profile: validation_pilot
+
+paths:
+  results_root: path/to/extracted/icv_weekly_results
+  failure_root: path/to/extracted/icv_weekly_results
+  output_dir: reports/data_and_failure_review
+  contrasts: configs/audit/registered_contrasts.yaml
+  manifest: data/manifests/neu_cls_v2.csv
+  reference_manifest: null
+  source_archive: data/archives/NEU-CLS.rar
+  data_root: data/raw
+
+expectations:
+  source_archive_bytes: 50733617
+  source_archive_sha256: a85bcc6bfa1a40e76f28079e135694aaf5f6a4ee01203f7eaacff0ebafaa96f8
+  raw_file_count: 1800
+  manifest_rows: 1800
+  active_rows: 1799
+  splits:
+    train: 1259
+    val: 180
+    test: 360
+    excluded: 1
+  class_count: 6
+  target_split: val
+  target_support_per_class: 30
+  samples_per_condition: 180
+  prediction_files: 40
+  prediction_rows: 7200
+  conditions_per_checkpoint: 10
+
+experiment:
+  configurations:
+    - resnet18_minimal
+    - resnet18_camera
+    - efficientnet_b0_minimal
+    - efficientnet_b0_camera
+  seeds:
+    - 43
+
+metrics:
+  tolerance: 1.0e-12
+  probability_sum_tolerance: 1.0e-5
+  names:
+    - accuracy
+    - macro_f1
+  summary_names:
+    - accuracy
+    - macro_f1
+
+bootstrap:
+  repetitions: 0
+  base_seed: 42
+
+failure_cases:
+  paths: []
+
