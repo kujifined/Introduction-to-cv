@@ -1,0 +1,35 @@
+version: 1
+
+contrasts:
+  - name: architecture_under_minimal
+    expression: efficientnet_b0_minimal - resnet18_minimal
+    coefficients:
+      efficientnet_b0_minimal: 1.0
+      resnet18_minimal: -1.0
+
+  - name: architecture_under_camera
+    expression: efficientnet_b0_camera - resnet18_camera
+    coefficients:
+      efficientnet_b0_camera: 1.0
+      resnet18_camera: -1.0
+
+  - name: augmentation_within_resnet18
+    expression: resnet18_camera - resnet18_minimal
+    coefficients:
+      resnet18_camera: 1.0
+      resnet18_minimal: -1.0
+
+  - name: augmentation_within_efficientnet_b0
+    expression: efficientnet_b0_camera - efficientnet_b0_minimal
+    coefficients:
+      efficientnet_b0_camera: 1.0
+      efficientnet_b0_minimal: -1.0
+
+  - name: architecture_x_augmentation_interaction
+    expression: (efficientnet_b0_camera - efficientnet_b0_minimal) - (resnet18_camera - resnet18_minimal)
+    coefficients:
+      efficientnet_b0_camera: 1.0
+      efficientnet_b0_minimal: -1.0
+      resnet18_camera: -1.0
+      resnet18_minimal: 1.0
+
