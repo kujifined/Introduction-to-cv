@@ -40,6 +40,12 @@ The saved-result check independently recalculates all 336 condition results from
 
 The original Kaggle experiment used Python 3.13.15, PyTorch 2.11.0+cu128, torchvision 0.26.0+cu128 and CUDA 12.8. [Environment records](environment/README.md) distinguish that training session from the locked local inference environment. The package accepts Python 3.11 through 3.13.
 
+## Presentation
+
+[Presentation slides, 3 pages](slides/final_presentation.pdf) | [English speaker notes and team roles](slides/speaker_notes.md)
+
+The notes allocate the explanation to all four team members and fit within the five-minute presentation slot. The two-minute demo follows separately.
+
 ## Live demo
 
 Open [09_live_demo.ipynb](notebooks/09_live_demo.ipynb) using the [demo setup guide](notebooks/README_LIVE_DEMO.md). Two verified example crops are included, so the presentation does not require downloading the complete dataset. Download the Kaggle results ZIP into `results_download/`, then run:
@@ -96,6 +102,6 @@ The main measured benefit is robustness from the augmentation package, with a sm
 - Danil Khasanshin, team leader: d.khasanshin@innopolis.university. Shared pipeline, experiment coordination, result/report integration, repository assembly and reproduction instructions.
 - Timur Kagarmanov: t.kagarmanov@innopolis.university. Independent data, metric and bootstrap audit, audit scripts and representative failure cases.
 - Ruslan Nasibullin: ru.nasibullin@innopolis.university. Six ResNet-run reviews, runtime verification for all 12 checkpoints, and the offline inference demo.
-- Nikita Selezenev: n.selezenev@innopolis.university. Six EfficientNet-run reviews, robustness/calibration comparison and plots.
+- Nikita Selezenev: n.selezenev@innopolis.university. Six EfficientNet-run reviews, robustness/calibration comparison, plots and the final presentation slides.
 
 [Detailed contributions](docs/CONTRIBUTIONS.md). [Team Git repository](https://github.com/kujifined/Introduction-to-cv).
