@@ -22,3 +22,13 @@ wandb/
 mlruns/
 reports/figures/generated/
 reports/tables/generated/
+
+# Downloaded data, model files and generated validation logs.
+results_download/
+validation/
+*.pt
+*.pth
+
+# Frozen reporting artifacts are versioned, unlike generated training outputs.
+!results/final/outputs/
+!results/final/outputs/**

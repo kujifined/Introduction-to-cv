@@ -1,0 +1,13 @@
+configuration,seed,macro_f1,predictions
+resnet18_minimal,42,1.0,/kaggle/working/icv_final_results/outputs/resnet18_minimal/seed_42/evaluation/test/predictions.csv
+resnet18_minimal,43,1.0,/kaggle/working/icv_final_results/outputs/resnet18_minimal/seed_43/evaluation/test/predictions.csv
+resnet18_minimal,44,1.0,/kaggle/working/icv_final_results/outputs/resnet18_minimal/seed_44/evaluation/test/predictions.csv
+resnet18_camera,42,0.9944203203062988,/kaggle/working/icv_final_results/outputs/resnet18_camera/seed_42/evaluation/test/predictions.csv
+resnet18_camera,43,1.0,/kaggle/working/icv_final_results/outputs/resnet18_camera/seed_43/evaluation/test/predictions.csv
+resnet18_camera,44,0.9944444444444445,/kaggle/working/icv_final_results/outputs/resnet18_camera/seed_44/evaluation/test/predictions.csv
+efficientnet_b0_minimal,42,0.9944429008057795,/kaggle/working/icv_final_results/outputs/efficientnet_b0_minimal/seed_42/evaluation/test/predictions.csv
+efficientnet_b0_minimal,43,0.9972220293075909,/kaggle/working/icv_final_results/outputs/efficientnet_b0_minimal/seed_43/evaluation/test/predictions.csv
+efficientnet_b0_minimal,44,0.9972220293075909,/kaggle/working/icv_final_results/outputs/efficientnet_b0_minimal/seed_44/evaluation/test/predictions.csv
+efficientnet_b0_camera,42,0.9888834843836801,/kaggle/working/icv_final_results/outputs/efficientnet_b0_camera/seed_42/evaluation/test/predictions.csv
+efficientnet_b0_camera,43,1.0,/kaggle/working/icv_final_results/outputs/efficientnet_b0_camera/seed_43/evaluation/test/predictions.csv
+efficientnet_b0_camera,44,0.9972220293075909,/kaggle/working/icv_final_results/outputs/efficientnet_b0_camera/seed_44/evaluation/test/predictions.csv

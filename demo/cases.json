@@ -1,0 +1,75 @@
+{
+  "status": "live_notebook_cpu_inference_verified",
+  "source_notebook": "https://www.kaggle.com/code/datastr3am/icv-final-project-results?scriptVersionId=364524496",
+  "source_results_archive_sha256": "0631b163efe979585e8d5420891b3e07a18b876d2dcbc632061ba3a39939a630",
+  "class_names": [
+    "crazing",
+    "inclusion",
+    "patches",
+    "pitted_surface",
+    "rolled_in_scale",
+    "scratches"
+  ],
+  "training_seed": 43,
+  "seed_selection_reason": "reuse historical baseline seed for illustration; not chosen as best test seed",
+  "preprocessing": "grayscale to 3 channels, 224x224 bilinear antialias, ImageNet normalization",
+  "checkpoints": [
+    {
+      "configuration": "resnet18_minimal",
+      "path_in_results_archive": "outputs/resnet18_minimal/seed_43/best.pt",
+      "sha256": "34efa443333bbb98e5d6b69819b1f2747d17bf64fc23bf543048db077fb967c4"
+    },
+    {
+      "configuration": "resnet18_camera",
+      "path_in_results_archive": "outputs/resnet18_camera/seed_43/best.pt",
+      "sha256": "e39cf1e841a758e25cf725d414df7c982f919f7c7fa24b14ed1b5c40d1ebf757"
+    },
+    {
+      "configuration": "efficientnet_b0_minimal",
+      "path_in_results_archive": "outputs/efficientnet_b0_minimal/seed_43/best.pt",
+      "sha256": "2a83e3e21aeb865ab7c4b5dd5c467447f1fd4591722378108d92151ba8d4af0a"
+    },
+    {
+      "configuration": "efficientnet_b0_camera",
+      "path_in_results_archive": "outputs/efficientnet_b0_camera/seed_43/best.pt",
+      "sha256": "3139edd4b1cd46c52711ac14217b5f30e7ecfdf79be936cf89a2548d8874d2ba"
+    }
+  ],
+  "cases": [
+    {
+      "id": "clean_reference",
+      "path": "NEU-CLS/Cr_107.bmp",
+      "corruption": "clean",
+      "severity": 0,
+      "true_class": "crazing",
+      "true_index": 0,
+      "raw_sha256": "a1c447ba065a1efa45a2b123589bcd5eac775cdb178027f6a13b45937c33b2cb",
+      "label_source": "frozen test manifest; display only"
+    },
+    {
+      "id": "same_image_blurred",
+      "path": "NEU-CLS/Cr_107.bmp",
+      "corruption": "gaussian_blur",
+      "severity": 3,
+      "true_class": "crazing",
+      "true_index": 0,
+      "raw_sha256": "a1c447ba065a1efa45a2b123589bcd5eac775cdb178027f6a13b45937c33b2cb",
+      "label_source": "frozen test manifest; display only",
+      "radius_pixels_before_resize": 2.0
+    },
+    {
+      "id": "observed_failure",
+      "path": "NEU-CLS/Sc_69.bmp",
+      "corruption": "clean",
+      "severity": 0,
+      "true_class": "scratches",
+      "true_index": 5,
+      "raw_sha256": "0801c90318dfbbd6f5f9f1783c1adacf779761bac61482afd43bf43ed6dd845c",
+      "label_source": "frozen test manifest; display only"
+    }
+  ],
+  "reference_output_usage": "smoke-test only; demo must execute actual model forward",
+  "actual_presentation_device_smoke_test_completed": false,
+  "case_selection_date": "2026-11-04",
+  "local_cli_inference_verified": true
+}

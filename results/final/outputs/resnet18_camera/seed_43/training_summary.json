@@ -1,0 +1,10 @@
+{
+  "best_epoch": 3,
+  "best_validation_macro_f1": 1.0,
+  "checkpoint": "/kaggle/working/icv_weekly_results/outputs/resnet18_camera/seed_43_weekly_augmentation_20261026/best.pt",
+  "elapsed_seconds": 64.9510540199999,
+  "epochs_completed": 13,
+  "model_parameters": 11179590,
+  "status": "complete",
+  "test_split_accessed": false
+}

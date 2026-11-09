@@ -1,0 +1,16 @@
+class_a,class_b,a_predicted_as_b,b_predicted_as_a,mutual_confusions
+rolled_in_scale,scratches,46,0,46
+inclusion,pitted_surface,20,0,20
+crazing,pitted_surface,5,12,17
+inclusion,scratches,11,5,16
+crazing,scratches,8,0,8
+pitted_surface,rolled_in_scale,0,7,7
+pitted_surface,scratches,3,3,6
+inclusion,rolled_in_scale,0,5,5
+crazing,patches,4,0,4
+patches,pitted_surface,0,4,4
+crazing,rolled_in_scale,0,2,2
+patches,scratches,1,0,1
+crazing,inclusion,0,0,0
+inclusion,patches,0,0,0
+patches,rolled_in_scale,0,0,0

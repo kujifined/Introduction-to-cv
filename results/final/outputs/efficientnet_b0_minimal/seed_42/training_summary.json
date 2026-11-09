@@ -1,0 +1,10 @@
+{
+  "best_epoch": 3,
+  "best_validation_macro_f1": 1.0,
+  "checkpoint": "/kaggle/working/icv_final_results/outputs/efficientnet_b0_minimal/seed_42/best.pt",
+  "elapsed_seconds": 83.15474531000007,
+  "epochs_completed": 13,
+  "model_parameters": 4015234,
+  "status": "complete",
+  "test_split_accessed": false
+}

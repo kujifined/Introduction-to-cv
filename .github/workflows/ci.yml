@@ -40,3 +40,6 @@ jobs:
 
       - name: Test
         run: uv run --no-sync --python 3.13 pytest
+
+      - name: Verify final prediction artifacts
+        run: uv run --no-sync --python 3.13 python scripts/verify_saved_results.py

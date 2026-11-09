@@ -1,0 +1,239 @@
+{
+  "name": "results_checkpoint_v1",
+  "core_revision": "760889adc87264122efe67d04e966dfeaaa319d8",
+  "configurations": [
+    "resnet18_minimal",
+    "resnet18_camera",
+    "efficientnet_b0_minimal",
+    "efficientnet_b0_camera"
+  ],
+  "training_seeds": [
+    42,
+    43,
+    44
+  ],
+  "manifest_sha256": "df784b6590f90947db6fd40c8d2e9650ab168744a0bd400e13dc535927f8232d",
+  "training_workers": 2,
+  "pretrained_weights": {
+    "resnet18": "IMAGENET1K_V1",
+    "efficientnet_b0": "IMAGENET1K_V1"
+  },
+  "checkpoint_selection": "earliest strict maximum clean validation macro-F1; patience 10",
+  "augmentation_version": "camera_aware_v1; registered settings unchanged",
+  "primary_metric": "six-class macro-F1",
+  "summary_metrics": [
+    "accuracy",
+    "macro_f1",
+    "balanced_accuracy",
+    "negative_log_likelihood",
+    "expected_calibration_error_10_bins",
+    "brier_score"
+  ],
+  "test_images": 360,
+  "test_classes": 6,
+  "test_support_per_class": 60,
+  "conditions": [
+    {
+      "corruption": "clean",
+      "severity": 0
+    },
+    {
+      "corruption": "brightness_dark",
+      "severity": 1
+    },
+    {
+      "corruption": "brightness_dark",
+      "severity": 2
+    },
+    {
+      "corruption": "brightness_dark",
+      "severity": 3
+    },
+    {
+      "corruption": "brightness_bright",
+      "severity": 1
+    },
+    {
+      "corruption": "brightness_bright",
+      "severity": 2
+    },
+    {
+      "corruption": "brightness_bright",
+      "severity": 3
+    },
+    {
+      "corruption": "contrast",
+      "severity": 1
+    },
+    {
+      "corruption": "contrast",
+      "severity": 2
+    },
+    {
+      "corruption": "contrast",
+      "severity": 3
+    },
+    {
+      "corruption": "gamma",
+      "severity": 1
+    },
+    {
+      "corruption": "gamma",
+      "severity": 2
+    },
+    {
+      "corruption": "gamma",
+      "severity": 3
+    },
+    {
+      "corruption": "shot_read_noise",
+      "severity": 1
+    },
+    {
+      "corruption": "shot_read_noise",
+      "severity": 2
+    },
+    {
+      "corruption": "shot_read_noise",
+      "severity": 3
+    },
+    {
+      "corruption": "gaussian_blur",
+      "severity": 1
+    },
+    {
+      "corruption": "gaussian_blur",
+      "severity": 2
+    },
+    {
+      "corruption": "gaussian_blur",
+      "severity": 3
+    },
+    {
+      "corruption": "motion_blur_horizontal",
+      "severity": 1
+    },
+    {
+      "corruption": "motion_blur_horizontal",
+      "severity": 2
+    },
+    {
+      "corruption": "motion_blur_horizontal",
+      "severity": 3
+    },
+    {
+      "corruption": "motion_blur_vertical",
+      "severity": 1
+    },
+    {
+      "corruption": "motion_blur_vertical",
+      "severity": 2
+    },
+    {
+      "corruption": "motion_blur_vertical",
+      "severity": 3
+    },
+    {
+      "corruption": "jpeg",
+      "severity": 1
+    },
+    {
+      "corruption": "jpeg",
+      "severity": 2
+    },
+    {
+      "corruption": "jpeg",
+      "severity": 3
+    }
+  ],
+  "severity_values": {
+    "brightness_dark": [
+      0.8,
+      0.65,
+      0.55
+    ],
+    "brightness_bright": [
+      1.2,
+      1.5,
+      1.8
+    ],
+    "contrast": [
+      0.8,
+      0.6,
+      0.4
+    ],
+    "gamma": [
+      1.2,
+      1.5,
+      2.0
+    ],
+    "gaussian_blur": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "motion_blur_horizontal": [
+      3.0,
+      5.0,
+      7.0
+    ],
+    "motion_blur_vertical": [
+      3.0,
+      5.0,
+      7.0
+    ],
+    "jpeg": [
+      70.0,
+      40.0,
+      20.0
+    ]
+  },
+  "shot_read_noise_settings": [
+    [
+      120.0,
+      0.005
+    ],
+    [
+      70.0,
+      0.0125
+    ],
+    [
+      40.0,
+      0.025
+    ]
+  ],
+  "noise_seed": "SHA256(path + NUL + corruption + NUL + severity), independent of model seed",
+  "evaluation_precision": "FP32",
+  "evaluation_batch_size": 32,
+  "evaluation_workers": 2,
+  "latency": {
+    "batch_size": 1,
+    "warmup_runs": 10,
+    "timed_runs": 50,
+    "precision": "FP32"
+  },
+  "latency_excludes": [
+    "loading",
+    "preprocessing",
+    "host_to_device_transfer"
+  ],
+  "aggregation": "per seed, then mean and sample SD across 42/43/44; no best seed or ensemble",
+  "robustness_mean": "unweighted mean of 27 condition-level macro-F1 scores, excluding clean",
+  "bootstrap": {
+    "repetitions": 5000,
+    "base_seed": 42,
+    "method": "registered paired stratified test-image bootstrap, fixed seed mean",
+    "scope": "five preregistered clean macro-F1 contrasts; training-seed SD is separate"
+  },
+  "failure_selection": {
+    "priority": "clean errors first, then corrupted errors",
+    "order": "confidence descending, then configuration, seed, corruption, severity, path",
+    "maximum_candidates": 12,
+    "unique_source_paths": true,
+    "prefer_diverse_true_classes_and_corruption_families": true,
+    "all_errors_retained": true,
+    "explanations": "human visual hypotheses; no invented mechanisms or modified severity"
+  },
+  "after_test_policy": "no changes to training, labels, split, checkpoints or severity",
+  "interpretation": "360 paired source crops, not 12*28*360 independent observations"
+}

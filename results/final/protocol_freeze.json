@@ -1,0 +1,361 @@
+{
+  "checkpoint_count": 12,
+  "files": {
+    "checkpoint_provenance.json": "533fb329faf73c22608566dc7747ec4baa45ef06717867c7a5b9745db15dd7ae",
+    "experiment_protocol.json": "cec7bfc3b88eec9da80c6575dfc8b89c2ff013f6e55d980a2b23600c1ee9366b",
+    "outputs/efficientnet_b0_camera/seed_42/best.pt": "60359e452902006dd36963c2eb1305aed83ac241a41b0d8f8a238103bc2153c2",
+    "outputs/efficientnet_b0_camera/seed_42/config.resolved.yaml": "e8e88dc8da7a30d3f190edbd3af11ba13ec7ddebbc70470bd6356edeaa3e445f",
+    "outputs/efficientnet_b0_camera/seed_42/evaluation/val/metrics.json": "27fb177b3edb5005127aaa95bfe8cd61aea39411091027550b3f2e81f43bf4b8",
+    "outputs/efficientnet_b0_camera/seed_42/evaluation/val/predictions.csv": "caa25706f3472ece10f26ddaeca3c0688e32953cd87e52a03507256fc57667b0",
+    "outputs/efficientnet_b0_camera/seed_42/history.csv": "0845d6a18af0a4c645a4964068cadaccd0d9c9b6f0aa9855ac0a5f156221787e",
+    "outputs/efficientnet_b0_camera/seed_42/runtime.json": "48616b99b1cd56ffb1601bc91b19048a7a946f15e47f1c0f6c614b40798bb204",
+    "outputs/efficientnet_b0_camera/seed_42/training_summary.json": "cc9b07687449841995cf33bb6e395a5ccfe0e8408caef4e203cfaee2f2392a3d",
+    "outputs/efficientnet_b0_camera/seed_43/best.pt": "3139edd4b1cd46c52711ac14217b5f30e7ecfdf79be936cf89a2548d8874d2ba",
+    "outputs/efficientnet_b0_camera/seed_43/config.resolved.yaml": "f5daea1ab99a6ae83287a409319c5449653382312ef1549c8ebf8c852f349375",
+    "outputs/efficientnet_b0_camera/seed_43/evaluation/val/metrics.json": "7791e6849e22cb11f68a5c5a1042d36cd83bf080fc19e392b514b26a35ffdb49",
+    "outputs/efficientnet_b0_camera/seed_43/evaluation/val/predictions.csv": "088ded09e7dca2fa0160d5eb4f977d35473f7c08b8940f8ee39016caea57ac56",
+    "outputs/efficientnet_b0_camera/seed_43/history.csv": "97c080f6c2430395a5fdff90fb83b5b580057e92d02a3c66acdfdbd4b7828582",
+    "outputs/efficientnet_b0_camera/seed_43/runtime.json": "48616b99b1cd56ffb1601bc91b19048a7a946f15e47f1c0f6c614b40798bb204",
+    "outputs/efficientnet_b0_camera/seed_43/training_summary.json": "0d91d4d2f3640a533502394007fefb891c9db48c7eb0ff00bd2333a8833fd0cc",
+    "outputs/efficientnet_b0_camera/seed_44/best.pt": "2975affe2e168d020ac7019b806da48164b4a90235567e5d2b5659883ef7132b",
+    "outputs/efficientnet_b0_camera/seed_44/config.resolved.yaml": "ed17a25a70bcacf61a4664f8776ce4d2f0484435b6fc63e55ff7b686d1ed68cf",
+    "outputs/efficientnet_b0_camera/seed_44/evaluation/val/metrics.json": "4128bf16082983c0f36d4f14885d3734861cdd8e31c65a80df49b011c62401b5",
+    "outputs/efficientnet_b0_camera/seed_44/evaluation/val/predictions.csv": "5a8e18d2a8aaa3f1426def41b33aa5545eddca23b883453ee94c41a056f13366",
+    "outputs/efficientnet_b0_camera/seed_44/history.csv": "45dec4e19b09146be86b399e6e1ef64e48723e04118e97d35f1ff9b3d8bd343c",
+    "outputs/efficientnet_b0_camera/seed_44/runtime.json": "48616b99b1cd56ffb1601bc91b19048a7a946f15e47f1c0f6c614b40798bb204",
+    "outputs/efficientnet_b0_camera/seed_44/training_summary.json": "f9ef0e29ad0987c31b97d0f9ebb203bfab10720a8214355cbbf5d409b131af30",
+    "outputs/efficientnet_b0_minimal/seed_42/best.pt": "dbf8b96644f5b765fecb857c2754e0c4e4fa7fff0c27964e83720d4048083fed",
+    "outputs/efficientnet_b0_minimal/seed_42/config.resolved.yaml": "5c38a29cf1c9aa86dea577f5d3bb0a69b53c159327af89e53370ef5a8d06161b",
+    "outputs/efficientnet_b0_minimal/seed_42/evaluation/val/metrics.json": "dbde59615510393925150b16e5c9b1321bb57d02c9862b67172fcebb6ff45bef",
+    "outputs/efficientnet_b0_minimal/seed_42/evaluation/val/predictions.csv": "b3f2932ed7cfc5446a170588f9f807f240d9759166becb0c37739a6f68155ad1",
+    "outputs/efficientnet_b0_minimal/seed_42/history.csv": "0dffce85fff61a3fa2ea0bb9492e39efd06e60473d5c0e8ea8397b243e59fb8e",
+    "outputs/efficientnet_b0_minimal/seed_42/runtime.json": "48616b99b1cd56ffb1601bc91b19048a7a946f15e47f1c0f6c614b40798bb204",
+    "outputs/efficientnet_b0_minimal/seed_42/training_summary.json": "338eff0ed7b571d68853992e77ed19ec420bfd832786bd673b3ff27c032f67d7",
+    "outputs/efficientnet_b0_minimal/seed_43/best.pt": "2a83e3e21aeb865ab7c4b5dd5c467447f1fd4591722378108d92151ba8d4af0a",
+    "outputs/efficientnet_b0_minimal/seed_43/config.resolved.yaml": "626487dc49f6e67a3a2362f793de24396f3febdf629459a5bddf6042a8c356da",
+    "outputs/efficientnet_b0_minimal/seed_43/evaluation/val/metrics.json": "4daa8572a6215f3d42865e8373b4b38cce36d853029f4c0294e1459f31d524a4",
+    "outputs/efficientnet_b0_minimal/seed_43/evaluation/val/predictions.csv": "ff5b98757b3fe2a2c84b83713ec70b4c99fc289f48a0fdb3b35eeca04b55c382",
+    "outputs/efficientnet_b0_minimal/seed_43/history.csv": "9d9caaa3950638b0384e2babaaa17bc598a028912bd7895519022acb6d132d3a",
+    "outputs/efficientnet_b0_minimal/seed_43/runtime.json": "242dabc6c44606856b690f9d6b15dc35976e82589aaa9e1467214bc8872cc324",
+    "outputs/efficientnet_b0_minimal/seed_43/training_summary.json": "3d34874002ead6dce134d62778b7beeb645dedd43cf0aad9c56fcbdbbc796059",
+    "outputs/efficientnet_b0_minimal/seed_44/best.pt": "053d8054615be0727a50be98a40a3c031831a56e09085516cc164c2462337bf3",
+    "outputs/efficientnet_b0_minimal/seed_44/config.resolved.yaml": "80ec0ae9608e99847bb4fc45ed75718dc55547e24d4ad6f1d739dea05ef5406a",
+    "outputs/efficientnet_b0_minimal/seed_44/evaluation/val/metrics.json": "c78087fa2f6fc3605a4250d34afdbc29a9d84b0fc2a641abffe8b362e02e677c",
+    "outputs/efficientnet_b0_minimal/seed_44/evaluation/val/predictions.csv": "5b5fc7bde72c4a96540a3b4fd3a294a9ecde7147010f1b76b6009fdbb230f681",
+    "outputs/efficientnet_b0_minimal/seed_44/history.csv": "8f1a27fb962b064b74aa632042e2e1ebe08a18535d3c162462fe00f87ce1d791",
+    "outputs/efficientnet_b0_minimal/seed_44/runtime.json": "48616b99b1cd56ffb1601bc91b19048a7a946f15e47f1c0f6c614b40798bb204",
+    "outputs/efficientnet_b0_minimal/seed_44/training_summary.json": "c0f5f43eed485ca8dc0ec11b6c77bd90dc00cb706e5747e7215f164bd75c8b3b",
+    "outputs/resnet18_camera/seed_42/best.pt": "5debe20a1c509aec7c9e3058fe38b3240de7eabc161505e7d0b497e16ba9628c",
+    "outputs/resnet18_camera/seed_42/config.resolved.yaml": "d481d60d6c4836082ed3bfc62ba5cb769e962c0cef73ca823c19118dbb9a6070",
+    "outputs/resnet18_camera/seed_42/evaluation/val/metrics.json": "ef8eb2f63d74cb45ae6a326ac72ce218a33732d9f5d14a98f86c80a1ef02090c",
+    "outputs/resnet18_camera/seed_42/evaluation/val/predictions.csv": "68fb257feb1b62be9a15929f0c2a5c9c1cfa40f573387d4ec9545e82ce8aa30e",
+    "outputs/resnet18_camera/seed_42/history.csv": "00eda9b624530792aad55b2b45eed754a30aac97236215be416f6d10b4b40078",
+    "outputs/resnet18_camera/seed_42/runtime.json": "48616b99b1cd56ffb1601bc91b19048a7a946f15e47f1c0f6c614b40798bb204",
+    "outputs/resnet18_camera/seed_42/training_summary.json": "f90f19091ef0295b9e47bdc443c10430326211ebb094157b7073b3367264e741",
+    "outputs/resnet18_camera/seed_43/best.pt": "e39cf1e841a758e25cf725d414df7c982f919f7c7fa24b14ed1b5c40d1ebf757",
+    "outputs/resnet18_camera/seed_43/config.resolved.yaml": "c5aa6d0ce9daea969cb6e9230f8e9b487b817b3e95bd21cab93052e413bc6666",
+    "outputs/resnet18_camera/seed_43/evaluation/val/metrics.json": "8a7ebae6d678637a8a82fd4e964999e04b4fcccfb36c2cb3655cebc77a6eeb36",
+    "outputs/resnet18_camera/seed_43/evaluation/val/predictions.csv": "cf90c9a986c054e2962c993a6ec5d8d6a9239a67f5fac7f5defa9197a8712bd6",
+    "outputs/resnet18_camera/seed_43/history.csv": "7a8838ab04542e4b00418ebee147703b1c54013ea0c9852f9aff5870240ce9c1",
+    "outputs/resnet18_camera/seed_43/runtime.json": "48616b99b1cd56ffb1601bc91b19048a7a946f15e47f1c0f6c614b40798bb204",
+    "outputs/resnet18_camera/seed_43/training_summary.json": "92f6d25a75b243ad005f664057c593bc415ce03f0561e88fcf6ab7d93e7b9c1c",
+    "outputs/resnet18_camera/seed_44/best.pt": "f42e3e1693e29e6d1196d4ae9403c770e3138beafdd76550399ee71c66f8d34a",
+    "outputs/resnet18_camera/seed_44/config.resolved.yaml": "d125798b94ae83994a76e32005e980a698983b70564b163ff86d3b9f32b93644",
+    "outputs/resnet18_camera/seed_44/evaluation/val/metrics.json": "e19266780113da9271b26fd85416ba8052bf298c225c2e18baee4dae8928bf84",
+    "outputs/resnet18_camera/seed_44/evaluation/val/predictions.csv": "1ba5ce634169abb0a37bad7ee07f0f297a234e31de96e636ad44e98cf9c8eac7",
+    "outputs/resnet18_camera/seed_44/history.csv": "cfbdce366a483e32509b9082360de9256643a31eea27542fc9558c5d768f6f3b",
+    "outputs/resnet18_camera/seed_44/runtime.json": "48616b99b1cd56ffb1601bc91b19048a7a946f15e47f1c0f6c614b40798bb204",
+    "outputs/resnet18_camera/seed_44/training_summary.json": "65eb88c12d94aa44733d1979de0b8ac09a2cd1fcee76c807139a29c6d44b7570",
+    "outputs/resnet18_minimal/seed_42/best.pt": "b866fa74c77cc3df3c5a20149bf9959af25347661230cfe6bdd2d0a5421d95c4",
+    "outputs/resnet18_minimal/seed_42/config.resolved.yaml": "2d9b9f6fe4e704d085ad5ce22083da3bdce94d73a806d9ec923ff75c6460a1b6",
+    "outputs/resnet18_minimal/seed_42/evaluation/val/metrics.json": "7131721f479b8a72ca6c65930ff806c47d98ee168f7bed204e2e8a39bc5088f8",
+    "outputs/resnet18_minimal/seed_42/evaluation/val/predictions.csv": "ddc88122104ef6e22a4b6923e2bb1cdc82fb9a5625067a235b5a29afae7b48a1",
+    "outputs/resnet18_minimal/seed_42/history.csv": "fdf9b05cf978f34ada4465e4b238ce9479b7e6922dc65323f3634506c718f763",
+    "outputs/resnet18_minimal/seed_42/runtime.json": "48616b99b1cd56ffb1601bc91b19048a7a946f15e47f1c0f6c614b40798bb204",
+    "outputs/resnet18_minimal/seed_42/training_summary.json": "4435106232eb2475773e07c6ae076beff32b94b68c0444081bc8cc86c1aa41ff",
+    "outputs/resnet18_minimal/seed_43/best.pt": "34efa443333bbb98e5d6b69819b1f2747d17bf64fc23bf543048db077fb967c4",
+    "outputs/resnet18_minimal/seed_43/config.resolved.yaml": "feba5dc118f609e91a6a5a906ff64201c6dc65531435917e0f1010752ea652e7",
+    "outputs/resnet18_minimal/seed_43/evaluation/val/metrics.json": "cde0acff05559f245c2840c5e46328bd0309526b29e784f7cdd9a5af47aa9ba6",
+    "outputs/resnet18_minimal/seed_43/evaluation/val/predictions.csv": "398882787d5a220f84a9921faa3e64fc0fc0d8e3964c598c4040aefa7fe0cf6e",
+    "outputs/resnet18_minimal/seed_43/history.csv": "84129132b9863bc049fbc355f5358ea290e3c4efa7af72354c81e02f52a53ccb",
+    "outputs/resnet18_minimal/seed_43/runtime.json": "242dabc6c44606856b690f9d6b15dc35976e82589aaa9e1467214bc8872cc324",
+    "outputs/resnet18_minimal/seed_43/training_summary.json": "5770ab00b7813851bc86bbf59a285654ec6c7755f55f5c228eaa72f74384fb27",
+    "outputs/resnet18_minimal/seed_44/best.pt": "e42a6994297d08f12416a073aef25d2d75803b4eb330d6d437b4a5b1b8f13d7d",
+    "outputs/resnet18_minimal/seed_44/config.resolved.yaml": "0ae8ca19a0def17475fd5d1c287fc8833e00ffc349d2b306dceeb1cbdd89a4eb",
+    "outputs/resnet18_minimal/seed_44/evaluation/val/metrics.json": "89bb4ff751a620056a535e0031bb1a43bf11bf7a21ac0b25886766aa5c3a1b76",
+    "outputs/resnet18_minimal/seed_44/evaluation/val/predictions.csv": "292cdc79b19eb7511aef34b4b2e87bdb0f7cc97e434ac2ffecf78c3f3fbfd5bd",
+    "outputs/resnet18_minimal/seed_44/history.csv": "0fecf3fc87443940940eabf0d88fa0ac4c7a30201423d782b9704734e5c0cb92",
+    "outputs/resnet18_minimal/seed_44/runtime.json": "48616b99b1cd56ffb1601bc91b19048a7a946f15e47f1c0f6c614b40798bb204",
+    "outputs/resnet18_minimal/seed_44/training_summary.json": "f13fad982e321971b04884b33f159ba8bc2f6610e273bb3cf50459eac8cfce95",
+    "validation_audit.json": "e22c95088a4d0ad36f356ecf6c589e35e9d0b30bdd306051d692c9ba01d537f9"
+  },
+  "human_post_run_reviews_complete": false,
+  "manifest_sha256": "df784b6590f90947db6fd40c8d2e9650ab168744a0bd400e13dc535927f8232d",
+  "protocol": {
+    "after_test_policy": "no changes to training, labels, split, checkpoints or severity",
+    "aggregation": "per seed, then mean and sample SD across 42/43/44; no best seed or ensemble",
+    "augmentation_version": "camera_aware_v1; registered settings unchanged",
+    "bootstrap": {
+      "base_seed": 42,
+      "method": "registered paired stratified test-image bootstrap, fixed seed mean",
+      "repetitions": 5000,
+      "scope": "five preregistered clean macro-F1 contrasts; training-seed SD is separate"
+    },
+    "checkpoint_selection": "earliest strict maximum clean validation macro-F1; patience 10",
+    "conditions": [
+      {
+        "corruption": "clean",
+        "severity": 0
+      },
+      {
+        "corruption": "brightness_dark",
+        "severity": 1
+      },
+      {
+        "corruption": "brightness_dark",
+        "severity": 2
+      },
+      {
+        "corruption": "brightness_dark",
+        "severity": 3
+      },
+      {
+        "corruption": "brightness_bright",
+        "severity": 1
+      },
+      {
+        "corruption": "brightness_bright",
+        "severity": 2
+      },
+      {
+        "corruption": "brightness_bright",
+        "severity": 3
+      },
+      {
+        "corruption": "contrast",
+        "severity": 1
+      },
+      {
+        "corruption": "contrast",
+        "severity": 2
+      },
+      {
+        "corruption": "contrast",
+        "severity": 3
+      },
+      {
+        "corruption": "gamma",
+        "severity": 1
+      },
+      {
+        "corruption": "gamma",
+        "severity": 2
+      },
+      {
+        "corruption": "gamma",
+        "severity": 3
+      },
+      {
+        "corruption": "shot_read_noise",
+        "severity": 1
+      },
+      {
+        "corruption": "shot_read_noise",
+        "severity": 2
+      },
+      {
+        "corruption": "shot_read_noise",
+        "severity": 3
+      },
+      {
+        "corruption": "gaussian_blur",
+        "severity": 1
+      },
+      {
+        "corruption": "gaussian_blur",
+        "severity": 2
+      },
+      {
+        "corruption": "gaussian_blur",
+        "severity": 3
+      },
+      {
+        "corruption": "motion_blur_horizontal",
+        "severity": 1
+      },
+      {
+        "corruption": "motion_blur_horizontal",
+        "severity": 2
+      },
+      {
+        "corruption": "motion_blur_horizontal",
+        "severity": 3
+      },
+      {
+        "corruption": "motion_blur_vertical",
+        "severity": 1
+      },
+      {
+        "corruption": "motion_blur_vertical",
+        "severity": 2
+      },
+      {
+        "corruption": "motion_blur_vertical",
+        "severity": 3
+      },
+      {
+        "corruption": "jpeg",
+        "severity": 1
+      },
+      {
+        "corruption": "jpeg",
+        "severity": 2
+      },
+      {
+        "corruption": "jpeg",
+        "severity": 3
+      }
+    ],
+    "configurations": [
+      "resnet18_minimal",
+      "resnet18_camera",
+      "efficientnet_b0_minimal",
+      "efficientnet_b0_camera"
+    ],
+    "core_revision": "760889adc87264122efe67d04e966dfeaaa319d8",
+    "evaluation_batch_size": 32,
+    "evaluation_precision": "FP32",
+    "evaluation_workers": 2,
+    "failure_selection": {
+      "all_errors_retained": true,
+      "explanations": "human visual hypotheses; no invented mechanisms or modified severity",
+      "maximum_candidates": 12,
+      "order": "confidence descending, then configuration, seed, corruption, severity, path",
+      "prefer_diverse_true_classes_and_corruption_families": true,
+      "priority": "clean errors first, then corrupted errors",
+      "unique_source_paths": true
+    },
+    "interpretation": "360 paired source crops, not 12*28*360 independent observations",
+    "latency": {
+      "batch_size": 1,
+      "precision": "FP32",
+      "timed_runs": 50,
+      "warmup_runs": 10
+    },
+    "latency_excludes": [
+      "loading",
+      "preprocessing",
+      "host_to_device_transfer"
+    ],
+    "manifest_sha256": "df784b6590f90947db6fd40c8d2e9650ab168744a0bd400e13dc535927f8232d",
+    "name": "results_checkpoint_v1",
+    "noise_seed": "SHA256(path + NUL + corruption + NUL + severity), independent of model seed",
+    "pretrained_weights": {
+      "efficientnet_b0": "IMAGENET1K_V1",
+      "resnet18": "IMAGENET1K_V1"
+    },
+    "primary_metric": "six-class macro-F1",
+    "robustness_mean": "unweighted mean of 27 condition-level macro-F1 scores, excluding clean",
+    "severity_values": {
+      "brightness_bright": [
+        1.2,
+        1.5,
+        1.8
+      ],
+      "brightness_dark": [
+        0.8,
+        0.65,
+        0.55
+      ],
+      "contrast": [
+        0.8,
+        0.6,
+        0.4
+      ],
+      "gamma": [
+        1.2,
+        1.5,
+        2.0
+      ],
+      "gaussian_blur": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "jpeg": [
+        70.0,
+        40.0,
+        20.0
+      ],
+      "motion_blur_horizontal": [
+        3.0,
+        5.0,
+        7.0
+      ],
+      "motion_blur_vertical": [
+        3.0,
+        5.0,
+        7.0
+      ]
+    },
+    "shot_read_noise_settings": [
+      [
+        120.0,
+        0.005
+      ],
+      [
+        70.0,
+        0.0125
+      ],
+      [
+        40.0,
+        0.025
+      ]
+    ],
+    "summary_metrics": [
+      "accuracy",
+      "macro_f1",
+      "balanced_accuracy",
+      "negative_log_likelihood",
+      "expected_calibration_error_10_bins",
+      "brier_score"
+    ],
+    "test_classes": 6,
+    "test_images": 360,
+    "test_support_per_class": 60,
+    "training_seeds": [
+      42,
+      43,
+      44
+    ],
+    "training_workers": 2
+  },
+  "recorded_at_utc": "2026-11-01T11:34:51.873612+00:00",
+  "source_files": {
+    "configs/efficientnet_b0_camera.yaml": "790a97f4f724bde99c9db0556842829bc877004b68bdb5edb54eef67ce115105",
+    "configs/efficientnet_b0_minimal.yaml": "06a4c87b15dfb7d721032f4016d6fbf0edfa6e07ca978564260e7ee423a8b568",
+    "configs/resnet18_camera.yaml": "afb7cb6d9ce7857fca8abb653534dc9cb1005a4a51af20094442a009b8f12edd",
+    "configs/resnet18_minimal.yaml": "1429bfd71eadf536332d1e13b86b9e0525d8dd42151c66f240e948a6c4c263ee",
+    "src/industrial_surface_defects/__init__.py": "8642cf7e5b79991e53c4b3ef18f6b567329e5dd6d3fc835c1bb7438ab74891da",
+    "src/industrial_surface_defects/compare.py": "87166427ec1e569932d08c390b76cc69a63f32ab03ad194363b5f75dd9ba27f1",
+    "src/industrial_surface_defects/config.py": "ab0c4f52cfe77337ed0d5b79fa21855e901ccbf983b409ca8445fdc0375128b4",
+    "src/industrial_surface_defects/constants.py": "d54d29bfecd616cdfba984d4448bcd164a557cbcd9fa3fd7ef63fc9e3b9e1d82",
+    "src/industrial_surface_defects/corruptions.py": "f902b625d5e70482e53ab3f218a19fd1215bfa7c45d5391bed794c6e09d01e45",
+    "src/industrial_surface_defects/data.py": "c37a6da82eae7474b2930d13c0393056a76d29204da41d6700fef5bf7a404dac",
+    "src/industrial_surface_defects/error_analysis.py": "8d90851d9bc16c7bf50342ba38f3bdf0c5b210e9d972c3f4f75a2d1910eae8b9",
+    "src/industrial_surface_defects/evaluate.py": "ee19c14e391ca28a9f1509e013689cf2a2465eb5522c8a47e9a789f53c17937c",
+    "src/industrial_surface_defects/explain.py": "2780f4d31f85456c7cfaf174002f50bed6b1b29972f5955fe8b77baef3880b81",
+    "src/industrial_surface_defects/metrics.py": "307736aa37d63ee2c60c67b67475e84bcdeb9a7f7ff58a5dc54131c35fb5329a",
+    "src/industrial_surface_defects/models.py": "c8bee857051fdd1f73f2caa5764dc84b0150a3007a12fd8ec6c83eca3dd31cf0",
+    "src/industrial_surface_defects/plots.py": "5c40e20744283064cdccfa5f2a40f27fdd5cd48ea9a2430acf11c7d042a91427",
+    "src/industrial_surface_defects/prepare.py": "d31cad506d3f1c8cfcf38a6089e25d2294ae0e8c256b06b45ee0a9b2c4232720",
+    "src/industrial_surface_defects/reproducibility.py": "4709a41b49c3a4c6655e6d393a114214ab750059c58025cd58793dd1c53f4b2a",
+    "src/industrial_surface_defects/results_checkpoint.py": "88126f3532679b7e71795b4e325ec125ddafe6753287acdfa4a1934eaa703bc9",
+    "src/industrial_surface_defects/robustness.py": "4e07ea2b6b8ff7976999ede1885b47d61c9ec0d16dc35befdea15731dd72d93c",
+    "src/industrial_surface_defects/train.py": "f6bc2358232a23daa1745029fad6d4b0dee3036ce66715187569e5c6c4c1e87b",
+    "src/industrial_surface_defects/transforms.py": "da5d1adaad7407c9755fafd9a9ba94f6fcc0637e2d7d7295a635ad1783c35ac4",
+    "src/industrial_surface_defects/weekly_validation.py": "dbbb31780ad4356a318f083b8b71f8f08389132d0ed8f2954f3e0e6b7178ecd8"
+  },
+  "status": "frozen_before_test",
+  "test_evaluation_started": false
+}

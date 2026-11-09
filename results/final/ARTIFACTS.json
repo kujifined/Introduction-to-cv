@@ -1,0 +1,97 @@
+{
+  "notebook_url": "https://www.kaggle.com/code/datastr3am/icv-final-project-results?scriptVersionId=364524496",
+  "archive_filename": "icv_final_results.zip",
+  "archive_sha256": "0631b163efe979585e8d5420891b3e07a18b876d2dcbc632061ba3a39939a630",
+  "manifest_sha256": "df784b6590f90947db6fd40c8d2e9650ab168744a0bd400e13dc535927f8232d",
+  "protocol_freeze_sha256": "b6595c2cd68cc5d1c1813e221adc27781be916aacc077256a816a489b7a97963",
+  "checkpoint_count": 12,
+  "condition_count": 336,
+  "prediction_rows": 120960,
+  "checkpoints": [
+    {
+      "configuration": "efficientnet_b0_camera",
+      "seed": 42,
+      "path_in_results_archive": "outputs/efficientnet_b0_camera/seed_42/best.pt",
+      "sha256": "60359e452902006dd36963c2eb1305aed83ac241a41b0d8f8a238103bc2153c2",
+      "local_path": "checkpoints/efficientnet_b0_camera/seed_42/best.pt"
+    },
+    {
+      "configuration": "efficientnet_b0_camera",
+      "seed": 43,
+      "path_in_results_archive": "outputs/efficientnet_b0_camera/seed_43/best.pt",
+      "sha256": "3139edd4b1cd46c52711ac14217b5f30e7ecfdf79be936cf89a2548d8874d2ba",
+      "local_path": "checkpoints/efficientnet_b0_camera/seed_43/best.pt"
+    },
+    {
+      "configuration": "efficientnet_b0_camera",
+      "seed": 44,
+      "path_in_results_archive": "outputs/efficientnet_b0_camera/seed_44/best.pt",
+      "sha256": "2975affe2e168d020ac7019b806da48164b4a90235567e5d2b5659883ef7132b",
+      "local_path": "checkpoints/efficientnet_b0_camera/seed_44/best.pt"
+    },
+    {
+      "configuration": "efficientnet_b0_minimal",
+      "seed": 42,
+      "path_in_results_archive": "outputs/efficientnet_b0_minimal/seed_42/best.pt",
+      "sha256": "dbf8b96644f5b765fecb857c2754e0c4e4fa7fff0c27964e83720d4048083fed",
+      "local_path": "checkpoints/efficientnet_b0_minimal/seed_42/best.pt"
+    },
+    {
+      "configuration": "efficientnet_b0_minimal",
+      "seed": 43,
+      "path_in_results_archive": "outputs/efficientnet_b0_minimal/seed_43/best.pt",
+      "sha256": "2a83e3e21aeb865ab7c4b5dd5c467447f1fd4591722378108d92151ba8d4af0a",
+      "local_path": "checkpoints/efficientnet_b0_minimal/seed_43/best.pt"
+    },
+    {
+      "configuration": "efficientnet_b0_minimal",
+      "seed": 44,
+      "path_in_results_archive": "outputs/efficientnet_b0_minimal/seed_44/best.pt",
+      "sha256": "053d8054615be0727a50be98a40a3c031831a56e09085516cc164c2462337bf3",
+      "local_path": "checkpoints/efficientnet_b0_minimal/seed_44/best.pt"
+    },
+    {
+      "configuration": "resnet18_camera",
+      "seed": 42,
+      "path_in_results_archive": "outputs/resnet18_camera/seed_42/best.pt",
+      "sha256": "5debe20a1c509aec7c9e3058fe38b3240de7eabc161505e7d0b497e16ba9628c",
+      "local_path": "checkpoints/resnet18_camera/seed_42/best.pt"
+    },
+    {
+      "configuration": "resnet18_camera",
+      "seed": 43,
+      "path_in_results_archive": "outputs/resnet18_camera/seed_43/best.pt",
+      "sha256": "e39cf1e841a758e25cf725d414df7c982f919f7c7fa24b14ed1b5c40d1ebf757",
+      "local_path": "checkpoints/resnet18_camera/seed_43/best.pt"
+    },
+    {
+      "configuration": "resnet18_camera",
+      "seed": 44,
+      "path_in_results_archive": "outputs/resnet18_camera/seed_44/best.pt",
+      "sha256": "f42e3e1693e29e6d1196d4ae9403c770e3138beafdd76550399ee71c66f8d34a",
+      "local_path": "checkpoints/resnet18_camera/seed_44/best.pt"
+    },
+    {
+      "configuration": "resnet18_minimal",
+      "seed": 42,
+      "path_in_results_archive": "outputs/resnet18_minimal/seed_42/best.pt",
+      "sha256": "b866fa74c77cc3df3c5a20149bf9959af25347661230cfe6bdd2d0a5421d95c4",
+      "local_path": "checkpoints/resnet18_minimal/seed_42/best.pt"
+    },
+    {
+      "configuration": "resnet18_minimal",
+      "seed": 43,
+      "path_in_results_archive": "outputs/resnet18_minimal/seed_43/best.pt",
+      "sha256": "34efa443333bbb98e5d6b69819b1f2747d17bf64fc23bf543048db077fb967c4",
+      "local_path": "checkpoints/resnet18_minimal/seed_43/best.pt"
+    },
+    {
+      "configuration": "resnet18_minimal",
+      "seed": 44,
+      "path_in_results_archive": "outputs/resnet18_minimal/seed_44/best.pt",
+      "sha256": "e42a6994297d08f12416a073aef25d2d75803b4eb330d6d437b4a5b1b8f13d7d",
+      "local_path": "checkpoints/resnet18_minimal/seed_44/best.pt"
+    }
+  ],
+  "notebook_sha256": "64b691296f608fcf7fd8726967b972f986f488d03cf3ad95eb4a72a6ff09a384"
+}

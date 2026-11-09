@@ -1,0 +1,17 @@
+{
+  "manifest_sha256": "df784b6590f90947db6fd40c8d2e9650ab168744a0bd400e13dc535927f8232d",
+  "archive_sha256": "a85bcc6bfa1a40e76f28079e135694aaf5f6a4ee01203f7eaacff0ebafaa96f8",
+  "original_files": 1800,
+  "excluded_duplicates": 1,
+  "active_images": 1799,
+  "split_counts": {
+    "excluded": 1,
+    "test": 360,
+    "train": 1259,
+    "val": 180
+  },
+  "every_manifest_file_hash_verified": true,
+  "active_paths_unique": true,
+  "known_hash_and_group_splits_disjoint": true,
+  "test_evaluation_performed": false
+}

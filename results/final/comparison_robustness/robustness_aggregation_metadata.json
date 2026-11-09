@@ -1,0 +1,132 @@
+{
+  "condition_grid": [
+    {
+      "corruption": "brightness_bright",
+      "severity": 1
+    },
+    {
+      "corruption": "brightness_bright",
+      "severity": 2
+    },
+    {
+      "corruption": "brightness_bright",
+      "severity": 3
+    },
+    {
+      "corruption": "brightness_dark",
+      "severity": 1
+    },
+    {
+      "corruption": "brightness_dark",
+      "severity": 2
+    },
+    {
+      "corruption": "brightness_dark",
+      "severity": 3
+    },
+    {
+      "corruption": "clean",
+      "severity": 0
+    },
+    {
+      "corruption": "contrast",
+      "severity": 1
+    },
+    {
+      "corruption": "contrast",
+      "severity": 2
+    },
+    {
+      "corruption": "contrast",
+      "severity": 3
+    },
+    {
+      "corruption": "gamma",
+      "severity": 1
+    },
+    {
+      "corruption": "gamma",
+      "severity": 2
+    },
+    {
+      "corruption": "gamma",
+      "severity": 3
+    },
+    {
+      "corruption": "gaussian_blur",
+      "severity": 1
+    },
+    {
+      "corruption": "gaussian_blur",
+      "severity": 2
+    },
+    {
+      "corruption": "gaussian_blur",
+      "severity": 3
+    },
+    {
+      "corruption": "jpeg",
+      "severity": 1
+    },
+    {
+      "corruption": "jpeg",
+      "severity": 2
+    },
+    {
+      "corruption": "jpeg",
+      "severity": 3
+    },
+    {
+      "corruption": "motion_blur_horizontal",
+      "severity": 1
+    },
+    {
+      "corruption": "motion_blur_horizontal",
+      "severity": 2
+    },
+    {
+      "corruption": "motion_blur_horizontal",
+      "severity": 3
+    },
+    {
+      "corruption": "motion_blur_vertical",
+      "severity": 1
+    },
+    {
+      "corruption": "motion_blur_vertical",
+      "severity": 2
+    },
+    {
+      "corruption": "motion_blur_vertical",
+      "severity": 3
+    },
+    {
+      "corruption": "shot_read_noise",
+      "severity": 1
+    },
+    {
+      "corruption": "shot_read_noise",
+      "severity": 2
+    },
+    {
+      "corruption": "shot_read_noise",
+      "severity": 3
+    }
+  ],
+  "conditions_per_run": 28,
+  "configurations": [
+    "resnet18_minimal",
+    "resnet18_camera",
+    "efficientnet_b0_minimal",
+    "efficientnet_b0_camera"
+  ],
+  "contrast_count": 5,
+  "corruption_suite": "corruption_suite_v1",
+  "runs": 12,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "summary_metric": "unweighted mean macro-F1 over the 27 corrupted conditions"
+}

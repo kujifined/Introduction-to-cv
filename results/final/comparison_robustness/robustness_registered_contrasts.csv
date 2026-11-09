@@ -1,0 +1,6 @@
+contrast,expression,metric,seed_42,seed_43,seed_44,mean,seed_sd
+architecture_under_minimal,efficientnet_b0_minimal - resnet18_minimal,mean_corrupted_macro_f1,-0.06827918574272307,-0.07410535351819514,-0.12937974457163637,-0.09058809461085153,0.0337206188814356
+architecture_under_camera,efficientnet_b0_camera - resnet18_camera,mean_corrupted_macro_f1,-0.0375935666780467,-0.005742281316248765,0.020345556683416643,-0.007663430436959606,0.029017298537798497
+augmentation_within_resnet18,resnet18_camera - resnet18_minimal,mean_corrupted_macro_f1,0.1510918407725017,0.12002862937716141,0.11425263413877762,0.12845770142948024,0.019813347220950378
+augmentation_within_efficientnet_b0,efficientnet_b0_camera - efficientnet_b0_minimal,mean_corrupted_macro_f1,0.18177745983717808,0.18839170157910778,0.26397793539383063,0.21138236560337217,0.045668999547202827
+architecture_x_augmentation_interaction,(efficientnet_b0_camera - efficientnet_b0_minimal) - (resnet18_camera - resnet18_minimal),mean_corrupted_macro_f1,0.030685619064676373,0.06836307220194637,0.149725301255053,0.08292466417389192,0.0608411164802598

@@ -1,0 +1,20 @@
+{
+  "bootstrap_repetitions": 5000,
+  "bootstrap_seed": 42,
+  "configurations": [
+    "efficientnet_b0_camera",
+    "efficientnet_b0_minimal",
+    "resnet18_camera",
+    "resnet18_minimal"
+  ],
+  "contrast_count": 5,
+  "interpretation": "A CI spanning zero means the available test data and seeds do not distinguish the configurations; it does not prove equivalence.",
+  "registered_design": true,
+  "registered_seeds": [
+    42,
+    43,
+    44
+  ],
+  "runs": 12,
+  "test_images": 360
+}

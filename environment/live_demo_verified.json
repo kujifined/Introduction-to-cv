@@ -1,0 +1,352 @@
+{
+  "status": "pass",
+  "execution": "all notebook code cells in a fresh in-process IPython session",
+  "offline_guard": "Python audit hook blocks IP sockets, DNS, socket IO and external processes",
+  "blocked_probe_families": [
+    "AF_INET",
+    "AF_INET6"
+  ],
+  "network_or_process_attempts_during_execution": [],
+  "environment": {
+    "python": "3.11.15",
+    "os": "Darwin",
+    "kernel": "25.4.0",
+    "architecture": "arm64",
+    "device": "cpu",
+    "packages": {
+      "torch": "2.14.0",
+      "torchvision": "0.29.0",
+      "Pillow": "12.3.0",
+      "IPython": "9.17.1",
+      "ipykernel": "7.3.0"
+    }
+  },
+  "notebook_sha256": "2a278d956a12009844443149308947a786003a1ecf7ea72cb030488a1a8874c7",
+  "implementation_sha256": "7e10fb45ed9fc5c5eae775a3c141f5a58b689d77daa55220378aabd7b94ebaf3",
+  "seed": 43,
+  "weights_source": "directory",
+  "verified_checkpoints": [
+    {
+      "configuration": "resnet18_minimal",
+      "path_in_results_archive": "outputs/resnet18_minimal/seed_43/best.pt",
+      "sha256": "34efa443333bbb98e5d6b69819b1f2747d17bf64fc23bf543048db077fb967c4"
+    },
+    {
+      "configuration": "resnet18_camera",
+      "path_in_results_archive": "outputs/resnet18_camera/seed_43/best.pt",
+      "sha256": "e39cf1e841a758e25cf725d414df7c982f919f7c7fa24b14ed1b5c40d1ebf757"
+    },
+    {
+      "configuration": "efficientnet_b0_minimal",
+      "path_in_results_archive": "outputs/efficientnet_b0_minimal/seed_43/best.pt",
+      "sha256": "2a83e3e21aeb865ab7c4b5dd5c467447f1fd4591722378108d92151ba8d4af0a"
+    },
+    {
+      "configuration": "efficientnet_b0_camera",
+      "path_in_results_archive": "outputs/efficientnet_b0_camera/seed_43/best.pt",
+      "sha256": "3139edd4b1cd46c52711ac14217b5f30e7ecfdf79be936cf89a2548d8874d2ba"
+    }
+  ],
+  "verified_input_hashes": {
+    "NEU-CLS/Cr_107.bmp": "a1c447ba065a1efa45a2b123589bcd5eac775cdb178027f6a13b45937c33b2cb",
+    "NEU-CLS/Sc_69.bmp": "0801c90318dfbbd6f5f9f1783c1adacf779761bac61482afd43bf43ed6dd845c"
+  },
+  "cell_elapsed_seconds": {
+    "prepare": 2.2738666250370443,
+    "clean_reference": 0.20690399990417063,
+    "same_image_blurred": 0.23264549998566508,
+    "observed_failure": 0.21875941613689065
+  },
+  "max_abs_probability_delta_vs_kaggle": 5.185604095458984e-06,
+  "probability_tolerance": 0.0005,
+  "comparisons": [
+    {
+      "case_id": "clean_reference",
+      "configuration": "resnet18_minimal",
+      "true_class": "crazing",
+      "probabilities": {
+        "crazing": 0.9759255647659302,
+        "inclusion": 0.007222658488899469,
+        "patches": 0.005032574292272329,
+        "pitted_surface": 0.00359174283221364,
+        "rolled_in_scale": 0.005066154524683952,
+        "scratches": 0.0031613458413630724
+      },
+      "top1": "crazing",
+      "top2": "inclusion",
+      "reference_probabilities": {
+        "crazing": 0.9759254455566406,
+        "inclusion": 0.0072226715274155,
+        "patches": 0.0050325524061918,
+        "pitted_surface": 0.0035917630884796,
+        "rolled_in_scale": 0.0050661810673773,
+        "scratches": 0.0031613528262823
+      },
+      "max_abs_delta": 1.1920928955078125e-07
+    },
+    {
+      "case_id": "clean_reference",
+      "configuration": "resnet18_camera",
+      "true_class": "crazing",
+      "probabilities": {
+        "crazing": 0.9894319772720337,
+        "inclusion": 0.0017450217856094241,
+        "patches": 0.0027997244615107775,
+        "pitted_surface": 0.0006996241281740367,
+        "rolled_in_scale": 0.004188855178654194,
+        "scratches": 0.0011348073603585362
+      },
+      "top1": "crazing",
+      "top2": "rolled_in_scale",
+      "reference_probabilities": {
+        "crazing": 0.9894319772720336,
+        "inclusion": 0.0017450044397264,
+        "patches": 0.002799711190164,
+        "pitted_surface": 0.0006996151641942,
+        "rolled_in_scale": 0.0041888272389769,
+        "scratches": 0.0011347954859957
+      },
+      "max_abs_delta": 2.7939677293975507e-08
+    },
+    {
+      "case_id": "clean_reference",
+      "configuration": "efficientnet_b0_minimal",
+      "true_class": "crazing",
+      "probabilities": {
+        "crazing": 0.9801892042160034,
+        "inclusion": 0.0036645440850406885,
+        "patches": 0.003636808367446065,
+        "pitted_surface": 0.004239659756422043,
+        "rolled_in_scale": 0.004883014131337404,
+        "scratches": 0.003386790631338954
+      },
+      "top1": "crazing",
+      "top2": "rolled_in_scale",
+      "reference_probabilities": {
+        "crazing": 0.9801892042160034,
+        "inclusion": 0.0036645580548793,
+        "patches": 0.0036368202418088,
+        "pitted_surface": 0.0042396755889058,
+        "rolled_in_scale": 0.0048830327577888,
+        "scratches": 0.0033867985475808
+      },
+      "max_abs_delta": 1.8626451396032417e-08
+    },
+    {
+      "case_id": "clean_reference",
+      "configuration": "efficientnet_b0_camera",
+      "true_class": "crazing",
+      "probabilities": {
+        "crazing": 0.9433467388153076,
+        "inclusion": 0.00897095538675785,
+        "patches": 0.009320132434368134,
+        "pitted_surface": 0.010142962448298931,
+        "rolled_in_scale": 0.014631650410592556,
+        "scratches": 0.013587631285190582
+      },
+      "top1": "crazing",
+      "top2": "rolled_in_scale",
+      "reference_probabilities": {
+        "crazing": 0.9433467388153076,
+        "inclusion": 0.0089709628373384,
+        "patches": 0.0093201324343681,
+        "pitted_surface": 0.0101429717615246,
+        "rolled_in_scale": 0.0146316643804311,
+        "scratches": 0.0135876387357711
+      },
+      "max_abs_delta": 1.3969838544639068e-08
+    },
+    {
+      "case_id": "same_image_blurred",
+      "configuration": "resnet18_minimal",
+      "true_class": "crazing",
+      "probabilities": {
+        "crazing": 0.11098875105381012,
+        "inclusion": 0.21217022836208344,
+        "patches": 0.0621357262134552,
+        "pitted_surface": 0.47293323278427124,
+        "rolled_in_scale": 0.050615981221199036,
+        "scratches": 0.09115598350763321
+      },
+      "top1": "pitted_surface",
+      "top2": "inclusion",
+      "reference_probabilities": {
+        "crazing": 0.1109885722398758,
+        "inclusion": 0.2121704369783401,
+        "patches": 0.0621358528733253,
+        "pitted_surface": 0.4729329347610473,
+        "rolled_in_scale": 0.0506160929799079,
+        "scratches": 0.0911561176180839
+      },
+      "max_abs_delta": 2.980232239324643e-07
+    },
+    {
+      "case_id": "same_image_blurred",
+      "configuration": "resnet18_camera",
+      "true_class": "crazing",
+      "probabilities": {
+        "crazing": 0.7993485331535339,
+        "inclusion": 0.019259881228208542,
+        "patches": 0.013274827040731907,
+        "pitted_surface": 0.023014871403574944,
+        "rolled_in_scale": 0.13698287308216095,
+        "scratches": 0.008119011297821999
+      },
+      "top1": "crazing",
+      "top2": "rolled_in_scale",
+      "reference_probabilities": {
+        "crazing": 0.7993484735488892,
+        "inclusion": 0.0192598048597574,
+        "patches": 0.0132748447358608,
+        "pitted_surface": 0.0230149123817682,
+        "rolled_in_scale": 0.1369830518960952,
+        "scratches": 0.0081190066412091
+      },
+      "max_abs_delta": 1.7881393424290515e-07
+    },
+    {
+      "case_id": "same_image_blurred",
+      "configuration": "efficientnet_b0_minimal",
+      "true_class": "crazing",
+      "probabilities": {
+        "crazing": 0.08015429228544235,
+        "inclusion": 0.27642175555229187,
+        "patches": 0.090520478785038,
+        "pitted_surface": 0.20615340769290924,
+        "rolled_in_scale": 0.14746184647083282,
+        "scratches": 0.1992882490158081
+      },
+      "top1": "inclusion",
+      "top2": "pitted_surface",
+      "reference_probabilities": {
+        "crazing": 0.0801543816924095,
+        "inclusion": 0.2764213979244232,
+        "patches": 0.0905204713344574,
+        "pitted_surface": 0.2061537355184555,
+        "rolled_in_scale": 0.1474618017673492,
+        "scratches": 0.1992881894111633
+      },
+      "max_abs_delta": 3.5762786865234375e-07
+    },
+    {
+      "case_id": "same_image_blurred",
+      "configuration": "efficientnet_b0_camera",
+      "true_class": "crazing",
+      "probabilities": {
+        "crazing": 0.5266709327697754,
+        "inclusion": 0.03215637430548668,
+        "patches": 0.037444740533828735,
+        "pitted_surface": 0.12644730508327484,
+        "rolled_in_scale": 0.24302105605602264,
+        "scratches": 0.0342596098780632
+      },
+      "top1": "crazing",
+      "top2": "rolled_in_scale",
+      "reference_probabilities": {
+        "crazing": 0.5266702175140381,
+        "inclusion": 0.0321564562618732,
+        "patches": 0.0374447368085384,
+        "pitted_surface": 0.1264472156763076,
+        "rolled_in_scale": 0.2430216968059539,
+        "scratches": 0.0342596210539341
+      },
+      "max_abs_delta": 7.152557373046875e-07
+    },
+    {
+      "case_id": "observed_failure",
+      "configuration": "resnet18_minimal",
+      "true_class": "scratches",
+      "probabilities": {
+        "crazing": 0.003408287186175585,
+        "inclusion": 0.11444801092147827,
+        "patches": 0.008445363491773605,
+        "pitted_surface": 0.010319950990378857,
+        "rolled_in_scale": 0.013974523171782494,
+        "scratches": 0.8494038581848145
+      },
+      "top1": "scratches",
+      "top2": "inclusion",
+      "reference_probabilities": {
+        "crazing": 0.0034083076752722,
+        "inclusion": 0.1144477576017379,
+        "patches": 0.0084453495219349,
+        "pitted_surface": 0.010319978930056,
+        "rolled_in_scale": 0.0139745194464921,
+        "scratches": 0.8494040369987488
+      },
+      "max_abs_delta": 2.533197403647991e-07
+    },
+    {
+      "case_id": "observed_failure",
+      "configuration": "resnet18_camera",
+      "true_class": "scratches",
+      "probabilities": {
+        "crazing": 0.0010862002382054925,
+        "inclusion": 0.023717958480119705,
+        "patches": 0.0034952866844832897,
+        "pitted_surface": 0.0035900974180549383,
+        "rolled_in_scale": 0.0028826079796999693,
+        "scratches": 0.9652278423309326
+      },
+      "top1": "scratches",
+      "top2": "inclusion",
+      "reference_probabilities": {
+        "crazing": 0.0010861967457458,
+        "inclusion": 0.0237179361283779,
+        "patches": 0.0034952617716044,
+        "pitted_surface": 0.0035900992807,
+        "rolled_in_scale": 0.0028825970366597,
+        "scratches": 0.9652278423309326
+      },
+      "max_abs_delta": 2.4912878889612328e-08
+    },
+    {
+      "case_id": "observed_failure",
+      "configuration": "efficientnet_b0_minimal",
+      "true_class": "scratches",
+      "probabilities": {
+        "crazing": 0.010398197919130325,
+        "inclusion": 0.5525723695755005,
+        "patches": 0.010923869907855988,
+        "pitted_surface": 0.013716834597289562,
+        "rolled_in_scale": 0.01662163808941841,
+        "scratches": 0.39576709270477295
+      },
+      "top1": "inclusion",
+      "top2": "scratches",
+      "reference_probabilities": {
+        "crazing": 0.0103982780128717,
+        "inclusion": 0.552567183971405,
+        "patches": 0.0109239369630813,
+        "pitted_surface": 0.0137169193476438,
+        "rolled_in_scale": 0.0166217163205146,
+        "scratches": 0.3957719206809997
+      },
+      "max_abs_delta": 5.185604095458984e-06
+    },
+    {
+      "case_id": "observed_failure",
+      "configuration": "efficientnet_b0_camera",
+      "true_class": "scratches",
+      "probabilities": {
+        "crazing": 0.00871637649834156,
+        "inclusion": 0.3706734776496887,
+        "patches": 0.009254924952983856,
+        "pitted_surface": 0.0184220802038908,
+        "rolled_in_scale": 0.01066392008215189,
+        "scratches": 0.5822691917419434
+      },
+      "top1": "scratches",
+      "top2": "inclusion",
+      "reference_probabilities": {
+        "crazing": 0.008716382086277,
+        "inclusion": 0.370671659708023,
+        "patches": 0.0092549361288547,
+        "pitted_surface": 0.0184221249073743,
+        "rolled_in_scale": 0.0106639079749584,
+        "scratches": 0.5822710394859314
+      },
+      "max_abs_delta": 1.8477439880371094e-06
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "acknowledge_test_use": true,
+  "acknowledgement_source": "explicit configuration in the user-launched Kaggle notebook",
+  "freeze_sha256": "b6595c2cd68cc5d1c1813e221adc27781be916aacc077256a816a489b7a97963",
+  "recorded_at_utc": "2026-11-01T11:35:19.775765+00:00"
+}

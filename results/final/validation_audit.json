@@ -1,0 +1,113 @@
+{
+  "runs": [
+    {
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "configuration": "resnet18_minimal",
+      "expected_calibration_error_10_bins": 0.03219401427939905,
+      "macro_f1": 1.0,
+      "negative_log_likelihood": 0.03313625833612363,
+      "seed": 42
+    },
+    {
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "configuration": "resnet18_minimal",
+      "expected_calibration_error_10_bins": 0.043983992029491284,
+      "macro_f1": 1.0,
+      "negative_log_likelihood": 0.0458233029047644,
+      "seed": 43
+    },
+    {
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "configuration": "resnet18_minimal",
+      "expected_calibration_error_10_bins": 0.041156859550041336,
+      "macro_f1": 1.0,
+      "negative_log_likelihood": 0.04286923228389966,
+      "seed": 44
+    },
+    {
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "configuration": "resnet18_camera",
+      "expected_calibration_error_10_bins": 0.030828172667814433,
+      "macro_f1": 1.0,
+      "negative_log_likelihood": 0.03256913908942142,
+      "seed": 42
+    },
+    {
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "configuration": "resnet18_camera",
+      "expected_calibration_error_10_bins": 0.04185853077837067,
+      "macro_f1": 1.0,
+      "negative_log_likelihood": 0.04666549704105886,
+      "seed": 43
+    },
+    {
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "configuration": "resnet18_camera",
+      "expected_calibration_error_10_bins": 0.06270105073421148,
+      "macro_f1": 1.0,
+      "negative_log_likelihood": 0.07025729576169105,
+      "seed": 44
+    },
+    {
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "configuration": "efficientnet_b0_minimal",
+      "expected_calibration_error_10_bins": 0.12627722326718707,
+      "macro_f1": 1.0,
+      "negative_log_likelihood": 0.1460319986925882,
+      "seed": 42
+    },
+    {
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "configuration": "efficientnet_b0_minimal",
+      "expected_calibration_error_10_bins": 0.05106075245244423,
+      "macro_f1": 1.0,
+      "negative_log_likelihood": 0.053479146296619984,
+      "seed": 43
+    },
+    {
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "configuration": "efficientnet_b0_minimal",
+      "expected_calibration_error_10_bins": 0.04756182150618927,
+      "macro_f1": 1.0,
+      "negative_log_likelihood": 0.049752997910423744,
+      "seed": 44
+    },
+    {
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "configuration": "efficientnet_b0_camera",
+      "expected_calibration_error_10_bins": 0.170261922559408,
+      "macro_f1": 1.0,
+      "negative_log_likelihood": 0.20943425911034663,
+      "seed": 42
+    },
+    {
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "configuration": "efficientnet_b0_camera",
+      "expected_calibration_error_10_bins": 0.061615862819268376,
+      "macro_f1": 1.0,
+      "negative_log_likelihood": 0.0673374255025145,
+      "seed": 43
+    },
+    {
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "configuration": "efficientnet_b0_camera",
+      "expected_calibration_error_10_bins": 0.06677859191076603,
+      "macro_f1": 1.0,
+      "negative_log_likelihood": 0.07517665741391606,
+      "seed": 44
+    }
+  ],
+  "status": "pass"
+}
