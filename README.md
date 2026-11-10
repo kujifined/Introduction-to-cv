@@ -57,6 +57,16 @@ uv run --no-sync jupyter lab notebooks/09_live_demo.ipynb
 
 Run the preparation cell before the talk, then the three scene cells individually: clean crazing, the same crop with Gaussian blur, and a real clean-test error. All four models compute fresh top-1/top-2 probabilities on CPU. [Recorded notebook verification](environment/live_demo_verified.json) checks all 12 case/model comparisons with network access blocked. Record the scenes for the submission video and verify them on the presentation device before the defense.
 
+### Local web interface
+
+A local web application demonstrates the same four trained seed-43 models: ResNet-18 and EfficientNet-B0, each with minimal or camera-aware training. Users can select prepared examples or upload a steel-defect image, then compare predicted classes and class probabilities side by side. All models run locally on CPU with the shared preprocessing pipeline. Uploaded images have no reference label by default; an optional user-supplied label is used only to assess the predictions after inference.
+
+![Local web demo showing an uploaded steel-defect image and predictions from all four model configurations](docs/images/demo_application.jpg)
+
+*Local demo with an uploaded image. The displayed CPU time covers the current four-model demo run and is separate from the T4 latency benchmark above.*
+
+The browser interface is currently a local presentation tool. To reproduce inference using the published code, use the notebook above or the command-line classifier below.
+
 ## Run the working classifier
 
 Follow [the dataset and weight preparation instructions](docs/REPRODUCIBILITY.md) once. Download `icv_final_results.zip` from the linked Kaggle version into `results_download/`, then restore the verified demo weights:
