@@ -40,9 +40,9 @@ The saved-result check independently recalculates all 336 condition results from
 
 The original Kaggle experiment used Python 3.13.15, PyTorch 2.11.0+cu128, torchvision 0.26.0+cu128 and CUDA 12.8. [Environment records](environment/README.md) distinguish that training session from the locked local inference environment. The package accepts Python 3.11 through 3.13.
 
-## Presentation
+## Final submission
 
-[Presentation slides, 3 pages](slides/final_presentation.pdf) | [English speaker notes and team roles](slides/speaker_notes.md)
+[Technical summary, 2 pages](technical_summary.pdf) | [Presentation slides, 3 pages](slides/final_presentation.pdf) | [English speaker notes and team roles](slides/speaker_notes.md)
 
 The notes allocate the explanation to all four team members and fit within the five-minute presentation slot. The two-minute demo follows separately.
 
